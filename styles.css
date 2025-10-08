@@ -1,0 +1,132 @@
+/* ==========================================
+   OMSB — Global Site Styles (styles.css)
+   Safe to drop-in. No HTML changes required
+   ========================================== */
+
+/* Brand variables (kept here so this file works even if a page missed them) */
+:root {
+  --color-primary-navy: #003366;
+  --color-accent-teal:  #006A6A;
+  --color-accent-gold:  #C8A232;
+  --color-text:         #1f2937;
+}
+
+/* ---------- Header nav: wrap on bigger screens, scroll on tiny screens ---------- */
+
+/* Keep horizontal scroll on narrow screens (mobile-first) */
+header nav .hide-scrollbar {
+  overflow-x: auto;
+}
+
+/* On small screens and up (Tailwind sm = 640px): remove scroll & wrap nicely */
+@media (min-width: 640px) {
+  header nav .hide-scrollbar {
+    overflow: visible !important;
+  }
+  header nav ul {
+    display: flex;              /* ensure flex is applied if not already */
+    flex-wrap: wrap;            /* wrap pills onto multiple lines */
+    justify-content: center;    /* center in header */
+    gap: 0.375rem !important;   /* slightly tighter spacing (≈ 1.5) */
+  }
+}
+
+/* Tighter pills so more fit per row, while staying readable */
+header nav a {
+  padding: 0.375rem 0.625rem;   /* ≈ py-1.5 px-2.5 */
+  font-size: 0.8125rem;         /* ≈ 13px */
+  line-height: 1.15;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
+  border-radius: 999px;         /* full pill */
+}
+
+/* Slightly roomier on md+ for readability */
+@media (min-width: 768px) {
+  header nav a {
+    padding: 0.4rem 0.75rem;    /* ≈ py-1.5 px-3 */
+    font-size: 0.875rem;        /* 14px (Tailwind text-sm) */
+  }
+}
+
+/* Subtle mobile edge-fades to hint “scroll for more” — match navy header */
+@media (max-width: 639.98px) {
+  header nav .hide-scrollbar {
+    position: relative;
+  }
+  header nav .hide-scrollbar::before,
+  header nav .hide-scrollbar::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 22px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  header nav .hide-scrollbar::before {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0, 51, 102, 0.95),
+      rgba(0, 51, 102, 0)
+    );
+  }
+  header nav .hide-scrollbar::after {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgba(0, 51, 102, 0.95),
+      rgba(0, 51, 102, 0)
+    );
+  }
+}
+
+/* Improve hover/focus feedback for accessibility (keeps your current colors) */
+header nav a:hover {
+  transform: translateY(-1px);
+}
+header nav a:focus-visible {
+  outline: 2px solid var(--color-accent-gold);
+  outline-offset: 2px;
+}
+
+/* ---------- Gentle typographic polish (optional but consistent across pages) ---------- */
+
+/* Keep page body text consistent */
+body {
+  color: var(--color-text);
+}
+
+/* Unify big section titles you commonly use */
+main h2.section-heading,
+main h2.text-om-navy {
+  letter-spacing: -0.01em;
+}
+
+/* Card hover effect consistency */
+.card-hover {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+
+/* Info boxes / “summary-card” / “ambition-card” borders (if present) */
+.summary-card { border-top: 5px solid var(--color-accent-teal); }
+.ambition-card { border-top: 5px solid var(--color-accent-gold); }
+
+/* Standardize section title accent (if you use .section-title anywhere) */
+.section-title {
+  border-left: 5px solid var(--color-accent-teal);
+  padding-left: 1rem;
+}
+
+/* Make back/CTA links feel consistent on all pages */
+.footer-cta a,
+.main-cta a {
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease, transform .15s ease;
+}
+.footer-cta a:hover,
+.main-cta a:hover {
+  transform: translateY(-1px);
+}
