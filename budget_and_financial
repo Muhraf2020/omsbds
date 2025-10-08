@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMSB Digital Transformation — Budget & Financial Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --color-primary-navy:#003366; --color-accent-teal:#006A6A; --color-accent-gold:#C8A232; --color-text:#1f2937; }
+    html { font-family:'Inter',sans-serif; scroll-behavior:smooth; }
+    .content-card { max-width: 1400px; }
+    .hide-scrollbar::-webkit-scrollbar { display:none; } .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+    .section-card { border-left: 4px solid var(--color-accent-gold); }
+    .table-header { background-color: var(--color-accent-teal); color: white; }
+    .table-body tr:nth-child(even) { background-color: #f3f4f6; }
+    .text-sm-faithful { font-size: 0.875rem; }
+  </style>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { 'om-navy':'var(--color-primary-navy)','om-teal':'var(--color-accent-teal)','om-gold':'var(--color-accent-gold)'}}} };
+  </script>
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased">
+<div class="content-card mx-auto bg-white shadow-2xl min-h-screen rounded-2xl overflow-hidden">
+  <!-- ===== GLOBAL HEADER (do not remove) ===== -->
+  <header class="bg-om-navy text-white p-6 sm:p-10 text-center shadow-xl">
+    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">OMSB Digital Transformation</h1>
+    <p class="max-w-3xl mx-auto mt-2 text-base sm:text-lg text-gray-200">Strategy Website • 2026–2035</p>
+    <!-- Global nav pills (compact, horizontally scrollable on mobile) -->
+    <nav aria-label="Primary" class="mt-5">
+      <div class="hide-scrollbar overflow-x-auto px-3 sm:px-4">
+        <ul class="flex justify-center gap-1.5 sm:gap-2 whitespace-nowrap">
+          <li><a href="index.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Home</a></li>
+          <li><a href="executive_summary.html" class="inline-block rounded-full bg-white/10 text-white border border-white/20 px-3 py-1.5 text-sm font-semibold transition">Executive Summary</a></li>
+          <li><a href="foundational_pillars.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Foundational Pillars</a></li>
+          <li><a href="vision_goals.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Vision &amp; Goals</a></li>
+          <li><a href="core_initiatives.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Core Initiatives</a></li>
+          <li><a href="technology_architecture.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Tech Architecture</a></li>
+          <li><a href="performance_measurement.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Performance Measurement</a></li>
+          <li><a href="change_management.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Change Management</a></li>
+          <li><a href="innovation_future_tech.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Innovation &amp; Future Tech</a></li>
+          <li><a href="risk_mitigation_plan.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Risk &amp; Mitigation Plan</a></li>
+          <li><a href="implementation_roadmap.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Implementation Roadmap</a></li>
+          <li><a href="financial_profile.html" class="inline-block rounded-full bg-om-teal text-white border border-om-teal px-3 py-1.5 text-sm font-semibold transition">Financial Profile</a></li>
+          <li><a href="full-document.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Full Strategy</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE CONTENT (Budget & Financial Plan) ===== -->
+  <main class="p-6 sm:p-10 lg:p-12">
+    <h2 class="text-3xl sm:text-5xl font-extrabold text-om-navy text-center mb-6 border-b-4 border-om-navy/10 pb-4">Budget & Financial Plan</h2>
+    <p class="text-2xl font-semibold text-om-teal text-center mb-10">(Investment & Phasing - A Funded Roadmap)</p>
+    
+    <!-- Introduction Section -->
+    <section class="mb-12 p-6 bg-om-teal/5 rounded-xl shadow-inner border-l-4 border-om-teal">
+      <p class="text-lg leading-relaxed text-gray-700">
+        The OMSB Digital Transformation requires a **10-year investment envelope of OMR 22.216 million**, phased to align with the Implementation (2026–2028), Optimization & Expansion (2029–2032), and Continuous Innovation (2033–2036) phases outlined in the new strategy.
+      </p>
+    </section>
+
+    <!-- Total Investment Overview -->
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-om-navy mb-4 border-b pb-2">Total Investment Overview</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-gray-100 p-6 rounded-xl text-sm-faithful">
+        <div class="p-4 bg-white rounded-lg shadow-md border-t-4 border-om-teal">
+          <p class="font-bold text-gray-600">Total Horizon</p>
+          <p class="text-xl font-extrabold text-om-navy mt-1">120 months (10 years)</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-md border-t-4 border-om-teal">
+          <p class="font-bold text-gray-600">Total Budget</p>
+          <p class="text-xl font-extrabold text-om-navy mt-1">OMR 22,216,400</p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-md border-t-4 border-om-teal">
+          <p class="font-bold text-gray-600">Structure</p>
+          <ul class="mt-1 space-y-1">
+            <li class="font-medium text-gray-700">Implementation Phase (30 months, 2026–2028) - **OMR 3,326,400**</li>
+            <li class="font-medium text-gray-700">Operational Phase (90 months, 2029–2036) - **OMR 18,890,000**</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Implementation Phase -->
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-om-navy mb-4 border-b pb-2">Implementation Phase (30 months - 2026–2028)</h3>
+      <p class="mb-3 text-sm-faithful text-gray-700">
+        **Investment - OMR 3,326,400**<br>
+        **Focus** - Establishing the MASAR platform, unifying data, and automating core workflows.
+      </p>
+      
+      <div class="overflow-x-auto rounded-lg shadow-lg">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="table-header">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Months</th>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Activities</th>
+              <th class="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider">Budget (OMR)</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200 table-body text-sm-faithful">
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">1–3</td>
+              <td class="px-6 py-4">Program initiation, stakeholder engagement, Business Requirements Document (BRD)</td>
+              <td class="px-6 py-4 whitespace-nowrap text-right font-medium">800,000</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">4–9</td>
+              <td class="px-6 py-4">Architecture setup, integration framework, core prototyping</td>
+              <td class="px-6 py-4 whitespace-nowrap text-right font-medium">1,300,000</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">10–24</td>
+              <td class="px-6 py-4">Full-stack module development, testing, iterative refinement</td>
+              <td class="px-6 py-4 whitespace-nowrap text-right font-medium">926,400</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">25–30</td>
+              <td class="px-6 py-4">Training, legacy data migration, platform go-live, stabilization</td>
+              <td class="px-6 py-4 whitespace-nowrap text-right font-medium">300,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <!-- Operational Phase -->
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-om-navy mb-4 border-b pb-2">Operational Phase (90 months - 2029–2036)</h3>
+      <p class="mb-3 text-sm-faithful text-gray-700">
+        **Investment - OMR 18,890,000**<br>
+        **Focus** - Continuous support, cloud hosting, AI expansion, compliance, predictive analytics, and feature evolution.
+      </p>
+      
+      <div class="overflow-x-auto rounded-lg shadow-lg">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="table-header">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Component</th>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Description</th>
+              <th class="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider">Cost (OMR)</th>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Strategic Pillar(s) Supported</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200 table-body text-sm-faithful">
+            <tr>
+              <td class="px-6 py-4 font-medium">Perpetual Platform License</td>
+              <td class="px-6 py-4">One-time IP ownership for OMSB</td>
+              <td class="px-6 py-4 whitespace-nowrap text-right font-medium">5,000,000</td>
+              <td class="px-6 py-4">Scale Sustainability</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium">Annual Maintenance</td>
+              <td class="px-6 py-4">Patches, upgrades, SLA assurance (1M $\times$ 7.5 yrs)</td>
+              <td class="px-6 py-4 whitespace-nowrap text-right font-medium">7,500,000</td>
+              <td class="px-6 py-4">Governance & Security, Sustainability</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium">Support Team</td>
+              <td class="px-6 py-4">12-person technical & admin team (90 months)</td>
+              <td class="px-6 py-4 whitespace-nowrap text-right font-medium">5,400,000</td>
+              <td class="px-6 py-4">Governance & Security, Sustainability</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium">Hosting Infrastructure</td>
+              <td class="px-6 py-4">Cloud hosting, backup, monitoring</td>
+              <td class="px-6 py-4 whitespace-nowrap text-right font-medium">990,000</td>
+              <td class="px-6 py-4">Sustainability, User-Centric Experiences</td>
+            </tr>
+          </tbody>
+          <tfoot class="bg-gray-200">
+            <tr>
+              <td colspan="2" class="px-6 py-4 text-left font-bold text-om-navy">Total Operational Investment:</td>
+              <td class="px-6 py-4 text-right font-extrabold text-om-navy whitespace-nowrap">18,890,000</td>
+              <td class="px-6 py-4"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- Year-by-Year Funding Profile -->
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-om-navy mb-4 border-b pb-2">Year-by-Year Funding Profile</h3>
+      <div class="overflow-x-auto rounded-lg shadow-lg max-w-lg mx-auto">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="table-header">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Year</th>
+              <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Activity Phase</th>
+              <th class="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider">Budget (OMR)</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200 table-body text-sm-faithful">
+            <tr>
+              <td class="px-6 py-3 font-medium">2026</td>
+              <td class="px-6 py-3">Planning, BRD</td>
+              <td class="px-6 py-3 text-right">800,000</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 font-medium">2027</td>
+              <td class="px-6 py-3">Architecture, development</td>
+              <td class="px-6 py-3 text-right">1,300,000</td>
+            </tr>
+            <tr class="font-bold bg-om-gold/20">
+              <td class="px-6 py-3">2028</td>
+              <td class="px-6 py-3">Go-live, license payment</td>
+              <td class="px-6 py-3 text-right">6,226,400</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 font-medium">2029</td>
+              <td class="px-6 py-3">Ops Year 1</td>
+              <td class="px-6 py-3 text-right">2,040,000</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 font-medium">2030</td>
+              <td class="px-6 py-3">Ops Year 2</td>
+              <td class="px-6 py-3 text-right">2,040,000</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 font-medium">2031</td>
+              <td class="px-6 py-3">Ops Year 3</td>
+              <td class="px-6 py-3 text-right">2,040,000</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 font-medium">2032</td>
+              <td class="px-6 py-3">Ops Year 4</td>
+              <td class="px-6 py-3 text-right">2,040,000</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 font-medium">2033</td>
+              <td class="px-6 py-3">Ops Year 5</td>
+              <td class="px-6 py-3 text-right">2,040,000</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 font-medium">2034</td>
+              <td class="px-6 py-3">Ops Year 6</td>
+              <td class="px-6 py-3 text-right">2,040,000</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 font-medium">2035</td>
+              <td class="px-6 py-3">Ops Year 7</td>
+              <td class="px-6 py-3 text-right">2,040,000</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 font-medium">2036</td>
+              <td class="px-6 py-3">Ops Year 8 (final year)</td>
+              <td class="px-6 py-3 text-right">1,650,000</td>
+            </tr>
+          </tbody>
+          <tfoot class="bg-om-navy/90 text-white">
+            <tr>
+              <td colspan="2" class="px-6 py-4 text-left font-bold">TOTAL INVESTMENT</td>
+              <td class="px-6 py-4 text-right font-extrabold whitespace-nowrap">22,216,400</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- Funding Sources & ROI -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm-faithful">
+        <div class="p-6 rounded-xl shadow-lg bg-white section-card">
+            <h4 class="text-xl font-bold text-om-teal mb-3">Funding Sources</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>**Primary** - Government allocation (MOH & Ministry of Finance).</li>
+                <li>**Supplementary** - GCC & WHO grants, AI/innovation funds.</li>
+                <li>**Revenue-linked** - Digital credential verification, premium CPD services.</li>
+                <li>**Partnerships** - Public–private models for AR/VR, tele-simulation, AI modules.</li>
+            </ul>
+        </div>
+        <div class="p-6 rounded-xl shadow-lg bg-white section-card">
+            <h4 class="text-xl font-bold text-om-teal mb-3">ROI & Value Realization</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>**Efficiency Gains** - $>40\%$ manual workload reduction, 250+ processes digitized.</li>
+                <li>**Operational Savings** - Vendor consolidation saves $\sim15\%$ annually.</li>
+                <li>**Revenue Streams** - Digital verification, premium CPD, paid services.</li>
+                <li>**Strategic Impact** - OMSB positioned as regional leader in medical education & regulation.</li>
+            </ul>
+        </div>
+    </section>
+
+  </main>
+  <!-- ===== GLOBAL FOOTER (do not remove) ===== -->
+  <footer class="p-6 text-center text-sm text-gray-500 border-t border-gray-200 bg-gray-50">
+    Digital Transformation Initiative | OMSB | 2026–2035
+  </footer>
+</div>
+</body>
+</html>
