@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foundational Pillars — OMSB</title>
+  <title>Strategic Pillars & Initiatives — OMSB</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,27 +13,38 @@
     html { font-family:'Inter',sans-serif; scroll-behavior:smooth; }
     .content-card { max-width: 1400px; }
     .hide-scrollbar::-webkit-scrollbar { display:none; } .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
-    .cta-button-teal { transition:all .2s ease-in-out; box-shadow:0 4px 6px rgba(0,0,0,.1); }
-    .cta-button-teal:hover { box-shadow:0 10px 15px rgba(0,0,0,.2); transform:translateY(-2px); background-color:#005555; }
+    .pill-nav a:hover { transform: translateY(-1px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .table-header { background-color: var(--color-primary-navy); color: white; }
+    .pillar-card { border-left: 5px solid var(--color-accent-teal); }
   </style>
   <script>
-    tailwind.config = { theme: { extend: { colors: { 'om-navy':'var(--color-primary-navy)','om-teal':'var(--color-accent-teal)','om-gold':'var(--color-accent-gold)'}}} };
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'om-navy': 'var(--color-primary-navy)',
+            'om-teal': 'var(--color-accent-teal)',
+            'om-gold': 'var(--color-accent-gold)',
+            'om-text': 'var(--color-text)',
+          },
+        },
+      },
+    }
   </script>
 </head>
-<body class="bg-gray-50 text-slate-800 antialiased">
-<div class="content-card mx-auto bg-white shadow-2xl min-h-screen rounded-2xl overflow-hidden">
-  <!-- ===== GLOBAL HEADER (do not remove) ===== -->
-  <header class="bg-om-navy text-white p-6 sm:p-10 text-center shadow-xl">
-    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">OMSB Digital Transformation</h1>
-    <p class="max-w-3xl mx-auto mt-2 text-base sm:text-lg text-gray-200">Foundational Pillars</p>
-    <!-- Global nav pills (compact, horizontally scrollable on mobile) -->
-    <nav aria-label="Primary" class="mt-5">
-      <div class="hide-scrollbar overflow-x-auto px-3 sm:px-4">
-        <ul class="flex justify-center gap-1.5 sm:gap-2 whitespace-nowrap">
+<body class="min-h-screen bg-gray-50 text-om-text">
+
+  <!-- ===== GLOBAL HEADER & NAVIGATION ===== -->
+  <header class="bg-om-navy shadow-lg sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+      <div class="text-white text-xl font-bold tracking-wide">OMSB Digital Strategy</div>
+      <div class="pill-nav overflow-x-auto hide-scrollbar">
+        <ul class="flex space-x-2 whitespace-nowrap">
           <li><a href="index.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Home</a></li>
           <li><a href="executive_summary.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Executive Summary</a></li>
-          <li><a href="foundational_pillars.html" class="inline-block rounded-full bg-white/10 text-white border border-white/20 px-3 py-1.5 text-sm font-semibold transition">Foundational Pillars</a></li>
           <li><a href="vision_goals.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Vision &amp; Goals</a></li>
+          <!-- Highlight current page -->
+          <li><a href="foundational_pillars.html" class="inline-block rounded-full bg-om-teal text-white border border-om-teal px-3 py-1.5 text-sm font-semibold transition shadow-md">Foundational Pillars</a></li>
           <li><a href="core_initiatives.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Core Initiatives</a></li>
           <li><a href="implementation_roadmap.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Implementation Roadmap</a></li>
           <li><a href="financial_profile.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Financial Profile</a></li>
@@ -43,21 +54,313 @@
     </nav>
   </header>
 
-  <!-- ===== PAGE CONTENT (you can safely edit inside this block) ===== -->
-  <main class="p-6 sm:p-10 lg:p-14">
-    <!-- ===== START: Replace or add your page-specific content below ===== -->
-<!-- placeholder -->
+  <!-- ===== PAGE CONTENT ===== -->
+  <main class="max-w-7xl mx-auto p-6 sm:p-10 lg:p-14">
+    <div class="content-card">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-om-navy mb-4 border-b-4 border-om-teal pb-2">Strategic Pillars and Key Initiatives</h1>
+        <p class="text-lg text-gray-700 mb-8">
+            To achieve the above objectives, OMSB’s digital strategy is organized into six strategic pillars. Each pillar represents a focus area of transformation and encompasses a set of initiatives or projects. These pillars ensure all dimensions of digital transformation – process, technology, data, people, and governance – are addressed in a coherent way. Below are the six pillars and their key initiatives:
+        </p>
+
+        <!-- Pillar 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6 pillar-card">
+            <h2 class="text-2xl font-bold text-om-teal mb-3">1. Modernize & Automate Core Processes</h2>
+            <p class="text-sm font-semibold text-gray-600 mb-4">Digitize and streamline every major OMSB service end-to-end.</p>
+            <p class="text-gray-700">
+                This pillar focuses on eliminating paper-based steps and manual bottlenecks in workflows such as trainee registration, exam applications, certification issuance, program accreditation, and more. All core services will be re-engineered with a **digital-first mindset** - for example, online e-services will be developed for every major transaction (residency applications, exam scheduling, CPD logging, accreditation submissions, etc.), with unnecessary steps removed and clear service standards (turnaround times, SLAs) enforced. By redesigning processes, OMSB expects to dramatically shorten service delivery times and improve accuracy. Where appropriate, **Robotic Process Automation (RPA)** will be introduced for high-volume repetitive tasks (e.g. data entry, document verification) to further boost efficiency. A key goal is to move the majority of services to the government’s “integrative” service category – meaning fully online and, where relevant, integrated with other agencies – as opposed to merely informational or partially online services. In practical terms, this could mean a resident can apply for a program, pay fees, upload documents, and receive acceptance or scheduling entirely through an online portal without visiting OMSB; or a hospital can apply for training program accreditation and track the review status digitally. By 2030, the aim is **100% digital availability** of OMSB services, resulting in faster turnaround, higher transparency, and significant reduction in administrative workload.
+            </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6 pillar-card">
+            <h2 class="text-2xl font-bold text-om-teal mb-3">2. Unify Data & Break Down Silos</h2>
+            <p class="text-sm font-semibold text-gray-600 mb-4">Establish a single source of truth for OMSB’s data and enable seamless data sharing.</p>
+            <p class="text-gray-700">
+                Under this pillar, OMSB will build a robust data management and integration framework. Key initiatives include creating a cloud-based **Data Lake and Enterprise Data Warehouse** that consolidate data from all OMSB systems (LMS, e-portfolio, exams, HR, accreditation, etc.). A priority project is to develop a **Master Professional Index (MPI)** – a unified master database assigning a unique ID to each individual in OMSB’s records (residents, fellows, alumni, faculty, etc.) – to track their information and transactions across all services. Significant effort will go into **cleaning and harmonizing data** (addressing the ~50% field inconsistencies found at baseline) so that information is consistent and reliable. OMSB will also form a **Data Governance Committee** to establish data standards, definitions, and access policies aligned with national guidelines (e.g. data classification levels, open data policies). On the integration front, the pillar will implement a unified integration middleware or API gateway, leveraging Oman’s **National Integration Platform (NIP)** where possible, to connect OMSB’s systems and to enable data exchange with external entities via secure APIs. For instance, once in place, this will allow a trainee’s data to be entered once in the core system and then automatically populate into the exam system, CPD system, etc., eliminating duplicate data entry. Breaking down data silos not only improves internal efficiency but also unlocks comprehensive analytics (since all data can be analyzed together) and better services (e.g. an employer verifying a graduate’s credentials can get instantaneous confirmation from the unified database rather than waiting for manual checks).
+            </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6 pillar-card">
+            <h2 class="text-2xl font-bold text-om-teal mb-3">3. Embed Analytics & AI</h2>
+            <p class="text-sm font-semibold text-gray-600 mb-4">Use data analytics and artificial intelligence to enhance decision-making and operational efficiency.</p>
+            <p class="text-gray-700">
+                This pillar will transform OMSB into a truly **data-driven organization** by embedding real-time analytics and intelligent automation into its processes. Key initiatives include deploying **business intelligence dashboards** that provide leadership and departments with real-time insights on performance (e.g. exam pass rates, residency fill rates, service processing times) and compliance metrics. **Advanced analytics tools** will be used for trend analysis and forecasting – for example, predicting future specialty workforce needs in Oman, identifying trainees at risk of underperformance (so interventions can be made early), and analyzing program outcomes to inform curriculum improvements. OMSB will pilot and scale **AI solutions** in various areas - an AI-driven recommendation engine to suggest personalized learning or CPD opportunities to doctors based on their profile; chatbots or virtual assistants on the OMSB portal to handle common queries 24/7; and AI-based proctoring or automated grading for exams to improve efficiency and integrity. Over time, machine learning models will be developed using the rich unified data to continuously optimize operations (e.g. an algorithm to optimize exam scheduling or match residents to training posts based on multiple criteria). The aim is not just retrospective reporting (hindsight) but **predictive and prescriptive analytics** – allowing OMSB to foresee issues and opportunities and act on data-driven recommendations. Embracing analytics and AI aligns with the government’s push for “smart government” services and will directly improve outcomes like pass rates, on-time completions, and resource planning.
+            </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6 pillar-card">
+            <h2 class="text-2xl font-bold text-om-teal mb-3">4. Deliver User-Centric Experiences</h2>
+            <p class="text-sm font-semibold text-gray-600 mb-4">Place the end-user at the center of all digital services and interactions.</p>
+            <p class="text-gray-700">
+                This pillar is about fundamentally improving how users (whether they are residents, faculty, or external stakeholders) experience OMSB’s services. OMSB will adopt a **mobile-first, omni-channel service delivery model**. That means key services will be optimized for smartphones and tablets from the start, not just desktops, and users can seamlessly switch between channels – for example, starting an application on a web portal, then completing it on a mobile app, or checking status via a self-service kiosk at OMSB if needed. A **unified OMSB Services Portal** will be developed as the one-stop shop for all e-services, integrating functionalities that are currently spread across separate systems (with single sign-on so one account accesses all). This portal will be fully **bilingual (Arabic/English)** and meet international **accessibility standards (WCAG 2.1 AA)** so that it’s usable by people with disabilities. To ensure the services truly meet user needs, OMSB will implement continuous **user feedback mechanisms** – such as satisfaction surveys, a feedback form on the portal, usage analytics, and possibly user focus groups – and use this input to drive ongoing UX improvements. Additionally, the strategy includes robust user engagement and outreach - OMSB will increase awareness of its digital services through user guides, video tutorials, webinars for stakeholders, and even periodic workshops so that all users know what digital options are available and how to use them. A formal **complaints and e-participation system** will be introduced, allowing users to log issues or suggest improvements online, aligning with the national emphasis on citizen-centric services. By focusing relentlessly on user-centric design and support, OMSB expects to significantly boost the adoption of its e-services (aiming for the majority of all transactions to happen online) and to achieve high satisfaction ratings.
+            </p>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6 pillar-card">
+            <h2 class="text-2xl font-bold text-om-teal mb-3">5. Strengthen Governance, Security & Compliance</h2>
+            <p class="text-sm font-semibold text-gray-600 mb-4">Establish strong digital governance and ensure all initiatives meet high standards of cybersecurity, risk management, and regulatory compliance.</p>
+            <p class="text-gray-700">
+                This pillar addresses the “people and policies” side of transformation. OMSB will formalize its **digital governance** by setting up dedicated bodies - a Digital Transformation Steering Committee, an IT Governance Committee, and a Data Governance Committee. Clear roles and responsibilities will be defined (e.g. an executive sponsor for the transformation, project owners for major initiatives, and change champions in each department) so that accountability is in place. A comprehensive **IT Governance Framework** document will be developed by 2026. On the security front, OMSB will implement a formal **Information Security Management System (ISMS)** aligned with **ISO 27001** standards and Oman’s national cybersecurity mandates. This involves updating or creating all key security policies and procedures. Early action will be taken to close known compliance gaps – notably, adopting the National Digital Accessibility Policy and establishing an official Internet Usage Policy for staff by 2026. OMSB will maintain its alignment with the national “cloud-first” policy and will develop an Open Data Policy. Cybersecurity capabilities will be significantly bolstered - regular vulnerability assessments and penetration tests will be conducted; all users will receive cybersecurity awareness training; **multi-factor authentication (MFA)** will be enforced; and OMSB aims to set up a **Security Operations Center (SOC)** – possibly via an outsourced service – for continuous monitoring by 2027. Additionally, **100% of new applications** will undergo security testing and privacy impact assessments before launch, moving up from the current 0% compliance. OMSB commits to meeting all Government IT compliance indicators by 2026. In essence, this pillar ensures that robust management structures, security safeguards, and compliance checks are built into the transformation, thereby managing risks and sustaining the change.
+            </p>
+        </div>
+
+        <!-- Pillar 6 -->
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6 pillar-card">
+            <h2 class="text-2xl font-bold text-om-teal mb-3">6. Empower Workforce & Foster Digital Innovation</h2>
+            <p class="text-sm font-semibold text-gray-600 mb-4">Invest in people and create a culture that embraces change and continuous innovation.</p>
+            <p class="text-gray-700">
+                OMSB recognizes that technology alone cannot transform an organization – success also depends on the capabilities and mindset of its people. Under this pillar, a comprehensive **Digital Skills & Culture Program** will be launched. By early 2026, OMSB will conduct a digital skills assessment for all staff to identify gaps. Based on this, a targeted training and upskilling plan will roll out so that **100% of relevant administrative staff** complete certified digital skills training by 2027 (up from the current ~22%). OMSB will establish a network of **Change Champions** across departments. A “train-the-trainer” approach will empower them to coach colleagues and help troubleshoot issues, which will greatly aid user adoption and reduce resistance. Regular communication and engagement are also part of change management - OMSB will implement a communications plan with frequent updates. To foster an innovation-friendly culture, OMSB will encourage a “digital-first, innovation-always” mindset. This could include setting up a small **Digital Innovation Lab or Taskforce** that experiments with emerging technologies and incubates new ideas. OMSB may run hackathons or idea challenges. A dedicated **innovation budget** will be earmarked to pilot novel solutions. Crucially, **change management will be embedded in every project**. By empowering its workforce and nurturing innovation, OMSB ensures that the transformation is not a one-time top-down project but a sustainable, evolving journey with buy-in at all levels. Over time, this will result in an organization that continuously improves itself and can adapt to new challenges beyond 2036.
+            </p>
+        </div>
+
+        <p class="text-gray-700 italic border-t pt-4 mt-6">
+            These six pillars collectively address all facets of OMSB’s digital transformation. They are interdependent and mutually reinforcing – for example, automating processes (Pillar 1) must go hand-in-hand with upskilling staff and change management (Pillar 6) so that employees can effectively operate new digital workflows. Strengthening governance and unifying data (Pillars 5 and 2) provide the solid foundation needed for advanced analytics and AI (Pillar 3). Meanwhile, an improved user experience (Pillar 4) is the ultimate outcome that all the other pillars strive to deliver. By pursuing initiatives in each pillar in parallel, OMSB will ensure that technology, processes, data, and people all advance together towards the 2036 vision.
+        </p>
+
+        <!-- Table 1: Strategic Pillars & Key Initiatives -->
+        <h3 class="text-2xl font-bold text-om-navy mt-12 mb-4 pt-4 border-t border-gray-200">Table: Strategic Pillars & Key Initiatives</h3>
+        <div class="overflow-x-auto shadow-md rounded-lg mb-8">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                    <tr>
+                        <th class="px-6 py-3 table-header text-left text-sm font-medium uppercase tracking-wider w-1/4">Pillar</th>
+                        <th class="px-6 py-3 table-header text-left text-sm font-medium uppercase tracking-wider w-1/4">Focus</th>
+                        <th class="px-6 py-3 table-header text-left text-sm font-medium uppercase tracking-wider w-2/4">Key Initiatives / Projects</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">1. Modernize & Automate Core Processes</td>
+                        <td class="px-6 py-4 whitespace-normal">Digitize and streamline all OMSB services end-to-end to eliminate manual bottlenecks.</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>End-to-end digitization of residency applications, exam scheduling, CPD logging, accreditation, and certification issuance.</li>
+                                <li>Introduce Robotic Process Automation (RPA) for repetitive tasks (data entry, verification).</li>
+                                <li>Redesign workflows with service SLAs and government “integrative” service category alignment.</li>
+                                <li>100% digital availability of OMSB services by 2030.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">2. Unify Data & Break Down Silos</td>
+                        <td class="px-6 py-4 whitespace-normal">Build a single source of truth with robust integration across systems and external entities.</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Create a cloud-based Data Lake & Enterprise Data Warehouse.</li>
+                                <li>Develop a Master Professional Index (MPI) assigning unique IDs to all professionals.</li>
+                                <li>Migrate and cleanse legacy data (~50% field inconsistencies to be resolved).</li>
+                                <li>Form Data Governance Committee for standards and access policies.</li>
+                                <li>Deploy integration middleware/API gateway aligned with Oman’s National Integration Platform (NIP).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">3. Embed Analytics & AI</td>
+                        <td class="px-6 py-4 whitespace-normal">Transform OMSB into a data-driven organization with predictive and prescriptive insights.</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Deploy BI dashboards with real-time KPIs (exam pass rates, fill rates, turnaround times).</li>
+                                <li>Implement predictive workforce modeling and performance risk alerts.</li>
+                                <li>Pilot AI-driven recommendation engine for personalized CPD and training opportunities.</li>
+                                <li>Introduce chatbots and AI-based exam proctoring/grading.</li>
+                                <li>Develop ML models for optimization (e.g., exam scheduling, residency matching).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">4. Deliver User-Centric Experiences</td>
+                        <td class="px-6 py-4 whitespace-normal">Place residents, faculty, and stakeholders at the center of service design.</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Develop a unified OMSB Services Portal with Single Sign-On (SSO).</li>
+                                <li>Adopt mobile-first, omni-channel delivery with apps, portals, and kiosks.</li>
+                                <li>Ensure bilingual (Arabic/English) access and WCAG 2.1 AA accessibility compliance.</li>
+                                <li>Introduce continuous user feedback loops (surveys, analytics, focus groups).</li>
+                                <li>Launch engagement and outreach programs (guides, tutorials, webinars).</li>
+                                <li>Implement formal e-participation and complaints system.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">5. Strengthen Governance, Security & Compliance</td>
+                        <td class="px-6 py-4 whitespace-normal">Build resilient governance, cybersecurity, and compliance structures.</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Establish Digital Transformation Steering Committee, IT Governance Committee, and Data Governance Committee.</li>
+                                <li>Develop IT Governance Framework (project mgmt., architecture, vendor policies).</li>
+                                <li>Implement ISO 27001-aligned Information Security Management System (ISMS).</li>
+                                <li>Enforce MFA, conduct regular penetration tests, and establish SOC by 2027.</li>
+                                <li>Align with national cloud-first, open data, and accessibility policies.</li>
+                                <li>Achieve full compliance with Government IT indicators by 2026 (incl. AI ethics).</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">6. Empower Workforce & Foster Digital Innovation</td>
+                        <td class="px-6 py-4 whitespace-normal">Invest in people, culture, and innovation capacity for long-term sustainability.</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Conduct staff digital skills assessment and roll out training plan.</li>
+                                <li>Achieve 100% digital skills training for administrative staff by 2027.</li>
+                                <li>Establish Change Champions network and train-the-trainer programs.</li>
+                                <li>Launch Digital Skills & Culture Program with regular town halls/newsletters.</li>
+                                <li>Set up Digital Innovation Lab/Taskforce and run hackathons/idea challenges.</li>
+                                <li>Allocate innovation budget for piloting new technologies.</li>
+                                <li>Embed change management and communication plans in every project.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table 2: Strategic Pillars & Modules -->
+        <h3 class="text-2xl font-bold text-om-navy mt-12 mb-4 pt-4 border-t border-gray-200">Table: OMSB Digital Transformation – Strategic Pillars & Modules</h3>
+        <div class="overflow-x-auto shadow-md rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                    <tr>
+                        <th class="px-6 py-3 table-header text-left text-sm font-medium uppercase tracking-wider w-1/4">Pillar</th>
+                        <th class="px-6 py-3 table-header text-left text-sm font-medium uppercase tracking-wider w-1/3">Functional Modules / Initiatives</th>
+                        <th class="px-6 py-3 table-header text-left text-sm font-medium uppercase tracking-wider w-1/3">Strategic Outcomes & Impact</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">Modernize & Automate Core Processes</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Health Professional Classification & Licensing</li>
+                                <li>Trainee Lifecycle Management</li>
+                                <li>Exams & Assessment Hub</li>
+                                <li>Program & Curriculum Management</li>
+                                <li>Continuing Professional Development (CPD)</li>
+                                <li>Accreditation & Quality Assurance</li>
+                                <li>Research & Journal Management</li>
+                                <li>Simulation & Innovation Center</li>
+                                <li>International Cooperation & Scholarships</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>60% reduction in certification/credentialing cycle times.</li>
+                                <li>End-to-end digitization of 250+ workflows.</li>
+                                <li>95% on-time publication of exam results.</li>
+                                <li>Fully automated CPD compliance tracking.</li>
+                                <li>Streamlined accreditation and research workflows.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">Unify Data & Break Down Silos</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Legacy Data Migration & Cleansing</li>
+                                <li>Central Data Lake & Data Warehouse</li>
+                                <li>Master Professional Index (MPI)</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Single source of truth across OMSB systems.</li>
+                                <li>Clean, structured, and interoperable data.</li>
+                                <li>Foundation for analytics, AI, and national data integration.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">Embed Analytics & AI</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>AI Enablement Layer (auto-grading, candidate matching, workload forecasting, risk alerts)</li>
+                                <li>Business Intelligence & Predictive Analytics</li>
+                                <li>Dashboards & Analytics</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Proactive governance with risk alerts for at-risk trainees.</li>
+                                <li>Predictive workforce modeling and ROI analytics.</li>
+                                <li>Real-time KPI dashboards for institutional performance.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">Deliver User-Centric Experiences</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Mobile Application Layer</li>
+                                <li>Unified E-Portal with Single Sign-On (SSO)</li>
+                                <li>Accessibility Compliance (WCAG 2.2 AAA)</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>≥90% satisfaction rates across trainees, faculty, and partners.</li>
+                                <li>Seamless mobile-first experience.</li>
+                                <li>Accessible services for all users.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">Strengthen Governance & Security</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Support Operations (HR, finance, procurement, correspondence, helpdesk)</li>
+                                <li>Security Certifications (ISO 27001, ISO 27701)</li>
+                                <li>Security Operations Center (SOC)</li>
+                                <li>Continuous Cyber-hardening</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Robust data governance and auditability.</li>
+                                <li>ISO-certified information security.</li>
+                                <li>24×7 SOC for proactive monitoring.</li>
+                                <li>Strengthened compliance and reduced cyber risk.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4 whitespace-normal font-semibold text-om-teal">Scale Sustainability</td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Perpetual Platform License</li>
+                                <li>Annual Maintenance & Support Team (12-person)</li>
+                                <li>Cloud-Native Infrastructure</li>
+                                <li>Modular Microservices (evergreen releases)</li>
+                            </ul>
+                        </td>
+                        <td class="px-6 py-4 whitespace-normal">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>OMSB ownership of IP and platform independence.</li>
+                                <li>Avoid reliance on external vendors.</li>
+                                <li>High system resilience and scalability.</li>
+                                <li>Evergreen quarterly release cycles for continuous innovation.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     <!-- ===== END: Page-specific content ===== -->
     <div class="mt-10 grid sm:grid-cols-2 gap-4">
       <a href="index.html" class="block text-center border border-om-navy/10 rounded-xl p-4 hover:bg-om-navy hover:text-white transition">Back to Homepage</a>
-      <a href="full-document.html" class="block text-center border border-om-navy/10 rounded-xl p-4 hover:bg-om-navy hover:text-white transition">View Full Strategy</a>
+      <a href="core_initiatives.html" class="block text-center border border-om-navy/10 rounded-xl p-4 bg-om-teal text-white hover:bg-om-navy transition font-bold">Next: Core Initiatives</a>
     </div>
+  </div>
   </main>
 
-  <!-- ===== GLOBAL FOOTER (do not remove) ===== -->
-  <footer class="p-6 text-center text-sm text-gray-500 border-t border-gray-200 bg-gray-50">
-    Digital Transformation Initiative | OMSB | 2026–2035
+  <!-- ===== GLOBAL FOOTER (same for all pages) ===== -->
+  <footer class="bg-om-navy mt-12 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-white/70">
+      <p>&copy; 2025 Oman Medical Specialty Board (OMSB) Digital Transformation Strategy.</p>
+      <p class="mt-1">Generated by Google Gemini.</p>
+    </div>
   </footer>
-</div>
 </body>
 </html>
