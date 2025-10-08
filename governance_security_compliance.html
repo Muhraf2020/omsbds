@@ -3,51 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Governance, Security & Compliance — OMSB</title>
+  <title>Governance, Security & Compliance</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom Colors based on the provided snippets */
-    :root { 
-      --color-primary-navy:#003366; 
-      --color-accent-teal:#006A6A; 
-      --color-accent-gold:#C8A232; 
-      --color-text:#1f2937; 
-    }
+    :root { --color-primary-navy:#003366; --color-accent-teal:#006A6A; --color-accent-gold:#C8A232; --color-text:#1f2937; }
     html { font-family:'Inter',sans-serif; scroll-behavior:smooth; }
     .content-card { max-width: 1400px; }
     .hide-scrollbar::-webkit-scrollbar { display:none; } .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
-    
-    /* Custom Tailwind Configuration for consistent branding */
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'om-navy': 'var(--color-primary-navy)',
-            'om-teal': 'var(--color-accent-teal)',
-            'om-gold': 'var(--color-accent-gold)',
-            'om-text': 'var(--color-text)',
-          },
-          animation: {
-            'wave': 'wave 2.5s infinite',
-          }
-        },
-      }
-    }
-    
-    .section-title {
-        border-left: 5px solid var(--color-accent-teal);
-        padding-left: 1rem;
-    }
-    .card-hover:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    }
+    .cta-button-teal { transition:all .2s ease-in-out; box-shadow:0 4px 6px rgba(0,0,0,.1); }
+    .cta-button-teal:hover { box-shadow:0 10px 15px rgba(0,0,0,.2); transform:translateY(-2px); background-color:#005555; }
+    /* Icon styling for section headings */
+    .section-icon { stroke: var(--color-accent-teal); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
   </style>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { 'om-navy':'var(--color-primary-navy)','om-teal':'var(--color-accent-teal)','om-gold':'var(--color-accent-gold)'}}} };
+  </script>
 </head>
-<body class="bg-gray-50 text-om-text min-h-screen flex flex-col">
+<body class="bg-gray-50 text-slate-800 antialiased">
+<div class="content-card mx-auto bg-white shadow-2xl min-h-screen rounded-2xl overflow-hidden">
+
 
   <!-- ===== GLOBAL HEADER (do not remove) ===== -->
 <header class="bg-om-navy text-white p-6 sm:p-10 text-center shadow-xl">
