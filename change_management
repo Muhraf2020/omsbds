@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMSB Digital Transformation — Change Management and Workforce Readiness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --color-primary-navy:#003366; --color-accent-teal:#006A6A; --color-accent-gold:#C8A232; --color-text:#1f2937; }
+    html { font-family:'Inter',sans-serif; scroll-behavior:smooth; }
+    .content-card { max-width: 1400px; }
+    .hide-scrollbar::-webkit-scrollbar { display:none; } .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+    .cta-button-teal { transition:all .2s ease-in-out; box-shadow:0 4px 6px rgba(0,0,0,.1); }
+    .cta-button-teal:hover { box-shadow:0 10px 15px rgba(0,0,0,.2); transform:translateY(-2px); background-color:#005555; }
+    /* Icon styling for section headings */
+    .section-icon { stroke: var(--color-accent-teal); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { 'om-navy':'var(--color-primary-navy)','om-teal':'var(--color-accent-teal)','om-gold':'var(--color-accent-gold)'}}} };
+  </script>
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased">
+<div class="content-card mx-auto bg-white shadow-2xl min-h-screen rounded-2xl overflow-hidden">
+  <!-- ===== GLOBAL HEADER (do not remove) ===== -->
+  <header class="bg-om-navy text-white p-6 sm:p-10 text-center shadow-xl">
+    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">OMSB Digital Transformation</h1>
+    <p class="max-w-3xl mx-auto mt-2 text-base sm:text-lg text-gray-200">Strategy Website • 2026–2035</p>
+    <!-- Global nav pills (compact, horizontally scrollable on mobile) -->
+    <nav aria-label="Primary" class="mt-5">
+      <div class="hide-scrollbar overflow-x-auto px-3 sm:px-4">
+        <ul class="flex justify-center gap-1.5 sm:gap-2 whitespace-nowrap">
+          <li><a href="index.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Home</a></li>
+          <li><a href="executive_summary.html" class="inline-block rounded-full bg-white/10 text-white border border-white/20 px-3 py-1.5 text-sm font-semibold transition">Executive Summary</a></li>
+          <li><a href="foundational_pillars.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Foundational Pillars</a></li>
+          <li><a href="vision_goals.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Vision &amp; Goals</a></li>
+          <li><a href="core_initiatives.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Core Initiatives</a></li>
+          <li><a href="technology_architecture.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Tech Architecture</a></li>
+          <li><a href="performance_measurement.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Performance Measurement</a></li>
+          <li><a href="change_management.html" class="inline-block rounded-full bg-white text-om-navy border border-white/20 px-3 py-1.5 text-sm font-semibold transition">Change Management</a></li>
+          <li><a href="implementation_roadmap.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Implementation Roadmap</a></li>
+          <li><a href="financial_profile.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Financial Profile</a></li>
+          <li><a href="full-document.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Full Strategy</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE CONTENT (Change Management) ===== -->
+  <main class="p-6 sm:p-10 lg:p-12">
+    <h2 class="text-3xl sm:text-5xl font-extrabold text-om-navy text-center mb-6 border-b-4 border-om-navy/10 pb-4">Change Management and Workforce Readiness</h2>
+    
+    <!-- Introduction Section -->
+    <section class="mb-12 p-6 bg-om-navy/5 rounded-xl shadow-inner border-l-4 border-om-teal">
+      <p class="text-lg leading-relaxed text-gray-700">
+        Transforming processes and technology is only part of the challenge – the success of OMSB’s digital strategy ultimately hinges on its people. **Effective change management and workforce development** will ensure that OMSB’s staff, trainees, and stakeholders are ready, willing, and able to embrace the new digital ways of working. This strategy embeds multiple initiatives to prepare the workforce and manage the human side of change.
+      </p>
+    </section>
+
+    <!-- Key Initiatives Grid -->
+    <section class="grid lg:grid-cols-2 gap-8">
+      
+      <!-- 1. Digital Skills Development Program -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Skills (Graduate Cap) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="section-icon mr-3"><path d="M10 20.75a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M22 13h-4a2 2 0 1 0 0 4h4a2 2 0 1 0 0-4z"/><path d="M10 17.75a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M2 13h4a2 2 0 1 0 0 4H2a2 2 0 1 0 0-4z"/><path d="M12 21a10 10 0 0 0 10-10V5a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v6a10 10 0 0 0 10 10z"/><path d="M7 6l5 5l5-5"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Digital Skills Development Program</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          OMSB will launch a structured program to **upskill its workforce** in digital competencies. Starting in 2026, a baseline **Digital Skills Assessment** will identify specific gaps. Based on this, OMSB will create a **Digital Skills Training Plan** (in-house workshops, online courses, certifications). The goal is to raise the percentage of staff with formal digital skills training from ~22% in 2024 to at least **75% by 2028, and 100% by 2031**. Key training will cover new system usage, general digital literacy, and advanced functional topics (e.g., data analytics for QA staff). Clinical educators will also receive orientation to champion new tools like the e-portfolio.
+        </p>
+      </div>
+
+      <!-- 2. Change Champions and User Involvement -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Champions (Star/Badge) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="section-icon mr-3"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M12 11l2 2l4-4"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Change Champions and User Involvement</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          A network of **Change Champions** will be cultivated at the grassroots level. Staff members who are enthusiastic about digital improvements will be nominated from each area to participate early in projects (requirements, testing, training-of-trainers). This creates **local go-to people** who can assist colleagues, easing the adoption curve through peer support. Additionally, OMSB will involve end-users (staff, trainees, program directors) in the design process through **user focus groups and beta testing**. By incorporating user feedback loops, OMSB not only improves the solutions but also increases user buy-in because they feel heard and see their input valued.
+        </p>
+      </div>
+
+      <!-- 3. Communication and Engagement -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Communication (Speaker/Announcement) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="section-icon mr-3"><path d="M15.5 17L21 17"/><path d="M15.5 10L21 10"/><path d="M3 13.5v-3c0-.38.25-.68.6-.68h4.8c.45 0 .8.41.8.84v4.58c0 .43-.35.84-.8.84H3.6c-.35 0-.6-.3-.6-.68z"/><path d="M3 10.5v3m10-9.5v11.5c0 1.25-.97 2.25-2.25 2.25h-4.5c-1.28 0-2.25-1-2.25-2.25V4"/><path d="M13 13.5v-3"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Communication and Engagement</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          OMSB will implement a **proactive communication plan** based on the guiding principle of **“no surprises.”** Internal channels will include monthly town hall meetings, newsletters, and a dedicated intranet portal to share progress, address concerns, and celebrate successes. Externally, changes for residents, applicants, and other users will be communicated via email, SMS, social media, and the website, with early **awareness campaigns** before new services launch. Communication will be **two-way**, actively soliciting feedback and questions, possibly through a dedicated email or hotline for transformation-related queries.
+        </p>
+      </div>
+
+      <!-- 4. Managing Resistance with Empathy -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Empathy (Heart/Support) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="section-icon mr-3"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Managing Resistance with Empathy</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          Resistance to change will be addressed with **empathy and support**. Managers will be trained in change management to listen to concerns, acknowledge difficulties, and provide encouragement. Struggling staff will receive **additional one-on-one coaching or refresher training**. Feedback channels will be created for staff to express issues anonymously, allowing the project team to adjust interfaces or provide clarifications. For external, less tech-savvy users, OMSB will offer helpdesks and tutorials (like **short how-to videos** and user manuals). By showing understanding and avoiding immediate penalization for confusion, OMSB fosters a safe environment to learn and adapt.
+        </p>
+      </div>
+
+      <!-- 5. Incentives and Accountability (Full Width) -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300 lg:col-span-1">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Incentives (Badge/Reward) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="section-icon mr-3"><circle cx="12" cy="12" r="10"/><path d="M12 16.5l-2.5-2.5l-1.5 1.5l4 4l5.5-5.5l-1.5-1.5z"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Incentives and Accountability</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          To further motivate adoption, OMSB will align certain performance incentives with digital transformation goals. Digital adoption metrics will be incorporated into **staff performance evaluations by 2029** (e.g., evaluating how well units have transitioned). **Awards or recognition** will be given to departments or individuals who innovate or achieve notable improvements. Conversely, accountability measures will require justification if a department is not utilizing an available digital service. The culture shift will be reinforced by **leadership modeling behavior** (e.g., senior leaders consistently using dashboards) to signal that the new way is the expected and rewarded way of working.
+        </p>
+      </div>
+      
+      <!-- 6. Vendor and Partner Enablement (Full Width) -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300 lg:col-span-1">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Partners (Handshake) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="section-icon mr-3"><path d="M12 2a10 10 0 1 0 0 20a10 10 0 0 0 0-20z"/><path d="M12 6v6h6"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Vendor and Partner Enablement</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          For projects involving external parties, OMSB will institute **knowledge transfer requirements in all vendor contracts**. Vendors must conduct comprehensive training and handover sessions to OMSB’s IT staff and administrators before project closure. A **mentorship approach** will pair vendor experts with OMSB staff during implementation to ensure skills are transferred through on-the-job learning. Key external partners (like MOH IT staff for integrated services or hospital administrators) will be invited to **joint training or orientation sessions** to promote a shared understanding and smooth collaboration across organizational boundaries.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Summary Section -->
+    <section class="mt-12 py-8 bg-om-gold/10 rounded-xl shadow-md border-l-4 border-om-gold">
+      <h4 class="text-xl font-bold text-om-navy px-6 mb-3">Investing in People and Culture</h4>
+      <p class="text-lg text-gray-700 leading-relaxed px-6">
+        In essence, OMSB’s change management and workforce readiness plan is about **investing in people as much as in technology**. By training staff, involving them in the change, communicating clearly, and building a supportive culture, OMSB will turn what could be a disruptive overhaul into an inclusive journey that people are part of. This approach ensures the strategy delivers real-world benefits – because modern systems can only succeed if they are used **correctly and willingly** by a digitally empowered workforce. OMSB is aiming for the best of both: modern systems and a digitally empowered workforce.
+      </p>
+    </section>
+  </main>
+  <!-- ===== GLOBAL FOOTER (do not remove) ===== -->
+  <footer class="p-6 text-center text-sm text-gray-500 border-t border-gray-200 bg-gray-50">
+    Digital Transformation Initiative | OMSB | 2026–2035
+  </footer>
+</div>
+</body>
+</html>
