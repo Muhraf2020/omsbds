@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMSB Digital Transformation — Technology Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --color-primary-navy:#003366; --color-accent-teal:#006A6A; --color-accent-gold:#C8A232; --color-text:#1f2937; }
+    html { font-family:'Inter',sans-serif; scroll-behavior:smooth; }
+    .content-card { max-width: 1400px; }
+    .hide-scrollbar::-webkit-scrollbar { display:none; } .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+    .cta-button-teal { transition:all .2s ease-in-out; box-shadow:0 4px 6px rgba(0,0,0,.1); }
+    .cta-button-teal:hover { box-shadow:0 10px 15px rgba(0,0,0,.2); transform:translateY(-2px); background-color:#005555; }
+  </style>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { 'om-navy':'var(--color-primary-navy)','om-teal':'var(--color-accent-teal)','om-gold':'var(--color-accent-gold)'}}} };
+  </script>
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased">
+<div class="content-card mx-auto bg-white shadow-2xl min-h-screen rounded-2xl overflow-hidden">
+  <!-- ===== GLOBAL HEADER (do not remove) ===== -->
+  <header class="bg-om-navy text-white p-6 sm:p-10 text-center shadow-xl">
+    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">OMSB Digital Transformation</h1>
+    <p class="max-w-3xl mx-auto mt-2 text-base sm:text-lg text-gray-200">Strategy Website • 2026–2035</p>
+    <!-- Global nav pills (compact, horizontally scrollable on mobile) -->
+    <nav aria-label="Primary" class="mt-5">
+      <div class="hide-scrollbar overflow-x-auto px-3 sm:px-4">
+        <ul class="flex justify-center gap-1.5 sm:gap-2 whitespace-nowrap">
+          <li><a href="index.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Home</a></li>
+          <li><a href="executive_summary.html" class="inline-block rounded-full bg-white/10 text-white border border-white/20 px-3 py-1.5 text-sm font-semibold transition">Executive Summary</a></li>
+          <li><a href="foundational_pillars.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Foundational Pillars</a></li>
+          <li><a href="vision_goals.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Vision &amp; Goals</a></li>
+          <li><a href="core_initiatives.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Core Initiatives</a></li>
+          <li><a href="technology_architecture.html" class="inline-block rounded-full bg-white text-om-navy border border-white/20 px-3 py-1.5 text-sm font-semibold transition">Tech Architecture</a></li>
+          <li><a href="implementation_roadmap.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Implementation Roadmap</a></li>
+          <li><a href="financial_profile.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Financial Profile</a></li>
+          <li><a href="full-document.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Full Strategy</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE CONTENT (Technology Architecture) ===== -->
+  <main class="p-6 sm:p-10 lg:p-12">
+    <h2 class="text-3xl sm:text-5xl font-extrabold text-om-navy text-center mb-6 border-b-4 border-om-navy/10 pb-4">Technology Architecture and Infrastructure</h2>
+    
+    <!-- Introduction Section -->
+    <section class="mb-12 p-6 bg-om-navy/5 rounded-xl shadow-inner border-l-4 border-om-teal">
+      <p class="text-lg leading-relaxed text-gray-700">
+        To support this transformation, OMSB will overhaul its technology architecture and infrastructure, moving from today’s fragmented setup to a modern, scalable, and secure digital platform. The target state architecture is defined by **modularity, interoperability, and use of cloud technologies**. Key aspects of the planned architecture include:
+      </p>
+    </section>
+
+    <!-- Detailed Pillars Section -->
+    <section class="grid lg:grid-cols-2 gap-8">
+      
+      <!-- 1. Cloud-First, Modular Architecture -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Cloud/Modularity (Cloud) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><path d="M4 14.5a3.5 3.5 0 0 1 3.5-3.5h.5a3.5 3.5 0 0 0 7 0h.5a3.5 3.5 0 0 1 3.5 3.5v.5a3.5 3.5 0 0 1-3.5 3.5H7.5a3.5 3.5 0 0 1-3.5-3.5z"/><path d="M22 10.5c-.32-2.3-1.9-4.3-4.1-5-2.2-7-6.2-7-6.2-7-4 0-7 2-7 6-2 0-3 2-3 4s1 4 3 4h14c2 0 3-2 3-4s-1-4-3-4z"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Cloud-First, Modular Architecture</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          OMSB will transition to a **cloud-native infrastructure**, leveraging the Oman Government Cloud and other approved cloud services for hosting all applications and data. The legacy monolithic systems will be refactored into modular **microservices** – each core function (registration, exams, CPD, accreditation, etc.) will be delivered as a set of containerized microservices with well-defined APIs. This microservices architecture, using containers (e.g. Docker) and orchestration (Kubernetes on cloud), ensures that each component can be developed, scaled, and updated independently, improving agility and reliability. For example, the exam management service can be scaled up around exam periods without affecting other services. Initially (Phase 1), a **hybrid cloud** approach may be used to migrate systems safely, but by Phase 2 OMSB plans a **multi-cloud deployment** (e.g. using both AWS GovCloud and Azure Government regions) with active-active failover for high availability. This multi-cloud strategy will enhance resilience by avoiding dependence on a single provider and enabling disaster recovery across platforms. **Infrastructure automation** (Infrastructure-as-Code tools like Terraform or Azure Resource Manager) will be adopted to standardize and speed up provisioning of resources. Overall, this approach brings scalability (systems can handle growth in users/data easily) and flexibility (new features or services can be plugged in with minimal impact), addressing OMSB’s current issues of rigidity and scalability.
+        </p>
+      </div>
+
+      <!-- 2. API-First Integration Layer -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for API/Integration (Layers/Connect) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><path d="M18 10h-6"/><path d="M2 10h2l3 3h3"/><path d="M12 10h2l3 3h5"/><path d="M12 14h-2l-3 3H2"/><path d="M6 10v4"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">API-First Integration Layer</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          A fundamental principle of the new architecture is **API-led connectivity**. OMSB will implement an **API gateway and integration middleware** that exposes all services via secure APIs and connects internal modules with external systems. In Phase 1, **RESTful APIs** will be developed for all major modules (with documentation via OpenAPI/Swagger) so that data can flow between OMSB’s systems and to authorized external consumers. By Phase 2, OMSB will introduce more advanced API capabilities like a **GraphQL API gateway** to allow flexible queries across multiple services in one call. An **event-driven integration mechanism** will be added as well - using an event streaming platform (e.g. Kafka), key events in one system (like “exam result published” or “user completed training”) will automatically trigger updates in other systems or notifications to users in real-time. This event-driven architecture will make OMSB services more responsive and decouple systems (so they sync via events rather than tight coupling). All APIs will use modern security (OAuth2/OpenID Connect for authentication, JSON Web Tokens, etc.) ensuring only authorized access. With this integration layer, OMSB can easily plug into external platforms as well – for instance, connecting with MOH’s systems or educational institutions via API calls rather than manual data exchanges. The **National Integration Platform (NIP)** will be used wherever possible to handle inter-agency data flows, in line with MTCIT guidelines. The end result is an **interoperable ecosystem** – both internally (all OMSB modules share data seamlessly) and externally (OMSB can exchange data with national and even international systems efficiently).
+        </p>
+      </div>
+      
+      <!-- 3. Centralized Data Platform -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Data (Database/Storage) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M21 19c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Centralized Data Platform</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          Data architecture is a crucial part of the strategy. OMSB will build a central **data lake and data warehouse** to break data silos and enable analytics. The **Data Lake** (using technologies like AWS S3 or Azure Data Lake Storage) will serve as a repository for raw, detailed data coming from all sources – LMS, MASAR e-portfolio, exam engine, HRIS, accreditation database, etc.. On top of this, a relational **Data Warehouse** (e.g. AWS Redshift or Azure Synapse) will be created to store integrated and cleaned data optimized for reporting and BI. By 2029, OMSB aims to have near **real-time data ingestion pipelines** (using streaming ETL tools like Kafka, AWS Glue or Azure Data Factory) feeding the warehouse, so dashboards reflect up-to-date information. Additionally, an **AI/ML Sandbox environment** (such as Databricks or SageMaker) will be provided for data scientists to develop predictive models using the collected data. A critical component of the data strategy is the implementation of the **Master Professional Index (MPI)** - this will be a unified database or identifier system that links all records related to a given individual (trainee, graduate, etc.) across all OMSB systems. The MPI will be implemented with appropriate master data management tools and likely integrated with national identifiers (e.g. Civil ID) to ensure consistency. An **HIE** (Health Information Exchange) middleware will also be introduced to support standards-based data exchange (using HL7/FHIR) between OMSB and clinical systems like the national EHR. By Phase 3, the data platform will even support advanced concepts like **federated learning** (collaborating on AI models with other entities without sharing raw data) to contribute to research or larger-scale AI initiatives. In short, OMSB’s data architecture will evolve into a unified, **analytics-ready platform** that turns data into a strategic asset.
+        </p>
+      </div>
+
+      <!-- 4. Emerging Technology Enablement -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Emerging Tech (Zap/Innovation) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Emerging Technology Enablement</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          The architecture is designed to accommodate emerging technologies that add value to OMSB’s mission. For example, OMSB will establish a **Blockchain-based Credential Ledger** as a supplementary component of the infrastructure. In Phase 1, a pilot using Hyperledger or similar will be conducted to issue a small number of digital certificates (credentials) on a blockchain for secure verification. By Phase 2, this will be scaled so that all OMSB certifications and possibly licenses are issued as **verifiable digital credentials** anchored on blockchain, complete with smart contracts to allow automated verification by employers or regulators. By Phase 3, OMSB plans to integrate its blockchain ledger with international networks – enabling a doctor’s credentials to be recognized across borders through a consortium of trust networks. Another component is the **AI & Automation Layer** - the architecture will include services for machine learning models and AI-driven processes. In Phase 1, OMSB will launch AI tools like an **“At-Risk Trainee Predictor”** that analyzes data across LMS, exams, etc. to flag individuals who might need support. Chatbots for common queries will also be deployed early. In Phase 2, more sophisticated AI features will come in (adaptive learning systems, AI-assisted grading, fraud detection in exam proctoring). By Phase 3, the architecture will support **autonomous workflows** – e.g. an AI system that can auto-approve license renewals under certain conditions or recommend actions to administrators (with oversight). The infrastructure will also support **tele-simulation and remote learning integration** - for instance, edge computing nodes (local processing units) will be set up at simulation centers to handle high-bandwidth VR/AR tasks with low latency, synchronizing key data back to the central cloud when needed. Essentially, the architecture is **future-ready** – built not just for current technologies but with the flexibility to incorporate new tools like Internet of Things (IoT) devices for training, or whatever next-gen tech emerges, without requiring a wholesale redesign.
+        </p>
+      </div>
+
+      <!-- 5. Security and Identity Infrastructure -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300 lg:col-span-2">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Security (Shield/Lock) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Security and Identity Infrastructure</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          The new architecture will have **security built-in at every layer**. OMSB will implement a robust **Identity and Access Management (IAM)** system - all user authentication will be unified via **Single Sign-On**, likely using OAuth 2.0 / OpenID Connect standards federated with the national digital identity (e.g. TAM). **Multi-factor authentication (MFA)** will be enforced especially for privileged access and sensitive actions, adding an extra layer of security. The architecture will also move towards a **Zero Trust model** by Phase 2 – meaning that not only external but internal access to systems is continuously verified (implementing principles like device trust checks, just-in-time access, micro-segmentation of networks). A **Security Information and Event Management (SIEM)** system will be integrated to aggregate logs from all systems and detect threats in real-time. By Phase 3, OMSB will explore **AI-driven security tools** that use machine learning to detect anomalies or predict attacks (e.g. user behavior analytics for unusual activities). Data security will include **encryption at all levels** and possibly tokenization or anonymization techniques for personal data when used in analytics. Regular backups and a disaster recovery setup across the multi-cloud environment will ensure resilience. Additionally, the architecture will incorporate **privacy-by-design** - for instance, clear data segmentation between test and production, pseudonymization of personal data in non-prod environments, and capabilities to easily fulfill data subject requests (like a trainee requesting all their data be provided or deleted, if regulations require). All these measures ensure that while the architecture is open and integrated, it is also **secure and trustworthy**, protecting OMSB’s information assets.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Summary Section -->
+    <section class="mt-12 py-8 bg-om-gold/10 rounded-xl shadow-md border-l-4 border-om-gold">
+      <h4 class="text-xl font-bold text-om-navy px-6 mb-3">Target State Summary</h4>
+      <p class="text-lg text-gray-700 leading-relaxed px-6">
+        In summary, the target technology architecture for OMSB is a **modular, API-driven, cloud-based ecosystem with a strong data backbone and integrated security**. It transforms OMSB’s IT from a collection of siloed applications into a coherent platform that can adapt and grow. This architecture will directly support the strategic goals - enabling **interoperability** (through APIs and integration), supporting **advanced analytics** (through the data lake/warehouse and AI infrastructure), improving **reliability and scalability** (through cloud and microservices), and safeguarding everything with modern security and identity management. By adopting this architecture, OMSB not only addresses its current technical limitations but also sets itself up to leverage technology innovations throughout the 2026–2036 period and beyond.
+      </p>
+    </section>
+  </main>
+  <!-- ===== GLOBAL FOOTER (do not remove) ===== -->
+  <footer class="p-6 text-center text-sm text-gray-500 border-t border-gray-200 bg-gray-50">
+    Digital Transformation Initiative | OMSB | 2026–2035
+  </footer>
+</div>
+</body>
+</html>
