@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Governance, Security & Compliance — OMSB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Colors based on the provided snippets */
+    :root { 
+      --color-primary-navy:#003366; 
+      --color-accent-teal:#006A6A; 
+      --color-accent-gold:#C8A232; 
+      --color-text:#1f2937; 
+    }
+    html { font-family:'Inter',sans-serif; scroll-behavior:smooth; }
+    .content-card { max-width: 1400px; }
+    .hide-scrollbar::-webkit-scrollbar { display:none; } .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+    
+    /* Custom Tailwind Configuration for consistent branding */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'om-navy': 'var(--color-primary-navy)',
+            'om-teal': 'var(--color-accent-teal)',
+            'om-gold': 'var(--color-accent-gold)',
+            'om-text': 'var(--color-text)',
+          },
+          animation: {
+            'wave': 'wave 2.5s infinite',
+          }
+        },
+      }
+    }
+    
+    .section-title {
+        border-left: 5px solid var(--color-accent-teal);
+        padding-left: 1rem;
+    }
+    .card-hover:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-om-text min-h-screen flex flex-col">
+
+  <!-- ===== GLOBAL HEADER (do not edit outside this block) ===== -->
+  <header class="bg-om-navy text-white shadow-lg sticky top-0 z-50">
+    <nav class="content-card mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
+        <div class="text-xl font-bold tracking-wider uppercase">
+          OMSB Digital Strategy
+        </div>
+        <ul class="flex flex-wrap justify-center sm:justify-end gap-2 text-center">
+          <li><a href="vision_goals.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Vision &amp; Goals</a></li>
+          <li><a href="foundational_pillars.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Foundational Pillars</a></li>
+          <li><a href="core_initiatives.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Core Initiatives</a></li>
+          <li><a href="implementation_roadmap.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Implementation Roadmap</a></li>
+          <li><a href="financial_profile.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Financial Profile</a></li>
+          <li><a href="full-document.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Full Strategy</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE CONTENT (you can safely edit inside this block) ===== -->
+  <main class="p-6 sm:p-10 lg:p-14">
+    <!-- ===== START: Replace or add your page-specific content below ===== -->
+
+    <div class="content-card mx-auto">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-om-navy mb-4">Governance, Security, and Compliance</h1>
+        <p class="text-xl text-gray-600 mb-10 border-b pb-4">
+            Robust governance and strong security are the cornerstones of this digital strategy, ensuring that initiatives are well-managed and risks are controlled. OMSB will institute multiple layers of oversight and align all activities with best practices and national regulations.
+        </p>
+
+        <!-- Digital Governance Structure -->
+        <section class="bg-white shadow-xl rounded-xl p-6 sm:p-10 mb-10 card-hover transition duration-300">
+            <h2 class="text-2xl sm:text-3xl font-bold section-title text-om-teal mb-6">Digital Governance Structure</h2>
+            <p class="mb-6 text-gray-700">
+                OMSB will formalize a governance framework to oversee the digital transformation. This involves establishing dedicated bodies and clarifying roles to ensure clear strategic direction and accountability.
+            </p>
+            
+            <div class="space-y-6">
+                <!-- DTSC -->
+                <div class="border-l-4 border-om-navy pl-4">
+                    <h3 class="font-semibold text-xl text-om-navy mb-1">Digital Transformation Steering Committee (DTSC)</h3>
+                    <p class="text-gray-700">
+                        Chaired by a senior executive, this high-level committee provides **strategic direction**, prioritizes projects, approves key policies, and monitors progress/KPIs, reporting directly to the OMSB Board.
+                    </p>
+                </div>
+                <!-- IT Governance & Architecture Board -->
+                <div class="border-l-4 border-om-navy pl-4">
+                    <h3 class="font-semibold text-xl text-om-navy mb-1">IT Governance & Architecture Board</h3>
+                    <p class="text-gray-700">
+                        Focuses on **technical decisions**, including standards for systems, integration, architecture approvals, and managing exception requests.
+                    </p>
+                </div>
+                <!-- Data Governance Committee -->
+                <div class="border-l-4 border-om-navy pl-4">
+                    <h3 class="font-semibold text-xl text-om-navy mb-1">Data Governance Committee</h3>
+                    <p class="text-gray-700">
+                        Responsible for **data standardization, data quality issues**, and ensuring data usage complies with privacy rules, with cross-department representation.
+                    </p>
+                </div>
+            </div>
+            <p class="mt-6 text-sm italic text-gray-500">
+                <span class="font-bold">Key Roles:</span> An Information Security Officer (or CISO) and a Chief Data Officer will be empowered to enforce policies. Clear **RACI matrices** will be defined for all major initiatives.
+            </p>
+        </section>
+
+        <!-- Policy Framework and Compliance -->
+        <section class="bg-white shadow-xl rounded-xl p-6 sm:p-10 mb-10 card-hover transition duration-300">
+            <h2 class="text-2xl sm:text-3xl font-bold section-title text-om-teal mb-6">Policy Framework and Compliance</h2>
+            <p class="mb-6 text-gray-700">
+                OMSB will proactively update its internal policy framework to achieve **near 100% compliance** with the Government’s ICT controls by 2027 and align with international standards like ISO 27001.
+            </p>
+
+            <ul class="list-disc list-inside space-y-3 text-gray-700 ml-4">
+                <li><span class="font-semibold text-om-navy">Adoption of National Policies (By 2026):</span> Formal adoption of the **National Digital Accessibility Policy** and an **Internet Usage Policy** for employees.</li>
+                <li><span class="font-semibold text-om-navy">Security Alignment:</span> Existing policies will be reviewed and strengthened in line with **ISO 27001** and Oman’s national cybersecurity framework.</li>
+                <li><span class="font-semibold text-om-navy">Mandatory Documentation (By 2026):</span> Documenting an **Information Security Governance Framework** and an **ICT Business Continuity/Disaster Recovery Plan**.</li>
+                <li><span class="font-semibold text-om-navy">Verification:</span> Conducting **annual IT audits** (internal or external) to verify compliance and identify gaps for remediation.</li>
+            </ul>
+            <p class="mt-6 text-sm italic text-gray-500">
+                Achieving this level of policy alignment and proven compliance allocates a significant weight (40%) to institutional readiness under the Government Digital Transformation Excellence criteria.
+            </p>
+        </section>
+        
+        <!-- Cybersecurity Enhancements -->
+        <section class="bg-white shadow-xl rounded-xl p-6 sm:p-10 mb-10 card-hover transition duration-300">
+            <h2 class="text-2xl sm:text-3xl font-bold section-title text-om-teal mb-6">Cybersecurity Enhancements</h2>
+            <p class="mb-6 text-gray-700">
+                Protecting the confidentiality, integrity, and availability of OMSB’s systems and data is paramount. The goal is to implement an **Information Security Management System (ISMS)** aligned with ISO/IEC 27001 standards by the late 2020s.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Security Measures -->
+                <div class="p-4 border border-gray-100 rounded-lg bg-blue-50/50">
+                    <h3 class="font-semibold text-lg text-om-navy mb-2">Technical Security Controls</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <li>**Access Controls:** Enforcing Role-Based Access (RBAC), Least Privilege principle, and **MFA** for administrators and sensitive system users.</li>
+                        <li>**Encryption:** Encrypting data **at rest** (databases, storage) and **in transit** (using TLS for all web/app traffic).</li>
+                        <li>**Testing:** Conducting **Vulnerability Assessments and Penetration Testing** on critical applications at least annually.</li>
+                    </ul>
+                </div>
+
+                <!-- Monitoring & Response -->
+                <div class="p-4 border border-gray-100 rounded-lg bg-blue-50/50">
+                    <h3 class="font-semibold text-lg text-om-navy mb-2">Incident Response & Monitoring</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <li>**Incident Response:** Establishing a dedicated **Incident Response Team** and procedure, including periodic drills to test readiness.</li>
+                        <li>**24/7 Monitoring:** Achieving a functional **Security Operations Center (SOC)** capability by 2028 (in-house or managed services).</li>
+                        <li>**Target:** Achieving **ISO 27001 certification by 2028** as a strategic target.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="mt-6 text-sm italic text-gray-500">
+                Privacy protection is also key: new digital services will undergo **Privacy Impact Assessments (PIA)**, and ethical guidelines will accompany the introduction of emerging tech like **AI** to ensure fairness and auditability.
+            </p>
+        </section>
+
+        <!-- Risk Management -->
+        <section class="bg-white shadow-xl rounded-xl p-6 sm:p-10 mb-10 card-hover transition duration-300">
+            <h2 class="text-2xl sm:text-3xl font-bold section-title text-om-teal mb-6">Risk Management</h2>
+            <p class="mb-6 text-gray-700">
+                Effective governance includes proactive risk management. OMSB will integrate digital transformation risks into its **Enterprise Risk Management (ERM) framework** to ensure the transformation stays on course.
+            </p>
+
+            <h3 class="font-semibold text-xl text-om-navy mb-3">Key Elements of Risk Management</h3>
+            <div class="space-y-4">
+                <div class="flex items-start">
+                    <div class="text-om-gold mr-3 mt-1">&#9658;</div>
+                    <p class="text-gray-700">
+                        **Risk Register:** A comprehensive risk register will be maintained, logging risks with their **likelihood and impact**, and assigning owners for mitigation. The DTSC will review this register in each meeting.
+                    </p>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-om-gold mr-3 mt-1">&#9658;</div>
+                    <p class="text-gray-700">
+                        **Contingency Planning:** The governance bodies will execute contingency plans if any risk materializes (e.g., project delays), such as bringing in additional resources or adjusting timelines.
+                    </p>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-om-gold mr-3 mt-1">&#9658;</div>
+                    <p class="text-gray-700">
+                        **Mitigation Examples:** For **change resistance**, heavy investment in communications and training; for **vendor risks**, clear SLAs, code escrow, and knowledge transfer clauses in contracts.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="bg-om-navy text-white rounded-xl p-8 shadow-xl">
+            <h2 class="text-2xl font-bold mb-3">In Summary</h2>
+            <p class="text-lg opacity-90">
+                Strong governance, rigorous security, and strict compliance are **foundational** to OMSB’s digital strategy. By setting up the right committees and policies, OMSB creates an environment where digital initiatives can be executed in a controlled, transparent manner. These measures not only meet regulatory requirements but also instill a culture of **accountability and safety**, building confidence among stakeholders for sustainable digital transformation.
+            </p>
+        </section>
+    </div>
+
+    <!-- ===== END: Page-specific content ===== -->
+    
+    <div class="mt-10 grid sm:grid-cols-2 gap-4 max-w-lg mx-auto">
+      <a href="index.html" class="block text-center border border-om-navy/10 rounded-xl p-4 hover:bg-om-navy hover:text-white transition bg-white shadow-md">Back to Homepage</a>
+      <a href="full-document.html" class="block text-center border border-om-navy/10 rounded-xl p-4 hover:bg-om-navy hover:text-white transition bg-white shadow-md">View Full Strategy</a>
+    </div>
+
+  </main>
+
+  <!-- ===== GLOBAL FOOTER (do not edit outside this block) ===== -->
+  <footer class="bg-om-navy mt-10 p-6 sm:p-8 text-white/80 text-center text-sm">
+    <p class="mb-2">Oman Medical Specialty Board (OMSB) Digital Strategy Document</p>
+    <p>&copy; 2024. All rights reserved.</p>
+  </footer>
+</body>
+</html>
