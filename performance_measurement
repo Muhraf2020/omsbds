@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMSB Digital Transformation — Performance Measurement and KPIs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --color-primary-navy:#003366; --color-accent-teal:#006A6A; --color-accent-gold:#C8A232; --color-text:#1f2937; }
+    html { font-family:'Inter',sans-serif; scroll-behavior:smooth; }
+    .content-card { max-width: 1400px; }
+    .hide-scrollbar::-webkit-scrollbar { display:none; } .hide-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+    .cta-button-teal { transition:all .2s ease-in-out; box-shadow:0 4px 6px rgba(0,0,0,.1); }
+    .cta-button-teal:hover { box-shadow:0 10px 15px rgba(0,0,0,.2); transform:translateY(-2px); background-color:#005555; }
+    /* Table Styling for the KPI table */
+    .kpi-table th { background-color: var(--color-primary-navy); color: white; padding: 12px 16px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--color-accent-gold); }
+    .kpi-table td { padding: 10px 16px; border-bottom: 1px solid #e5e7eb; vertical-align: top; font-size: 0.9rem; }
+    .kpi-table tr:nth-child(even) td { background-color: #f9fafb; }
+    .kpi-table .perspective-row td { background-color: var(--color-accent-teal) !important; color: white; font-weight: 700; font-size: 1rem; border-top: 2px solid white; border-bottom: 2px solid white; }
+    .kpi-table .focus-row { background-color: #e5f5f5; font-weight: 500; }
+  </style>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { 'om-navy':'var(--color-primary-navy)','om-teal':'var(--color-accent-teal)','om-gold':'var(--color-accent-gold)'}}} };
+  </script>
+</head>
+<body class="bg-gray-50 text-slate-800 antialiased">
+<div class="content-card mx-auto bg-white shadow-2xl min-h-screen rounded-2xl overflow-hidden">
+  <!-- ===== GLOBAL HEADER (do not remove) ===== -->
+  <header class="bg-om-navy text-white p-6 sm:p-10 text-center shadow-xl">
+    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">OMSB Digital Transformation</h1>
+    <p class="max-w-3xl mx-auto mt-2 text-base sm:text-lg text-gray-200">Strategy Website • 2026–2035</p>
+    <!-- Global nav pills (compact, horizontally scrollable on mobile) -->
+    <nav aria-label="Primary" class="mt-5">
+      <div class="hide-scrollbar overflow-x-auto px-3 sm:px-4">
+        <ul class="flex justify-center gap-1.5 sm:gap-2 whitespace-nowrap">
+          <li><a href="index.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Home</a></li>
+          <li><a href="executive_summary.html" class="inline-block rounded-full bg-white/10 text-white border border-white/20 px-3 py-1.5 text-sm font-semibold transition">Executive Summary</a></li>
+          <li><a href="foundational_pillars.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Foundational Pillars</a></li>
+          <li><a href="vision_goals.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Vision &amp; Goals</a></li>
+          <li><a href="core_initiatives.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Core Initiatives</a></li>
+          <li><a href="technology_architecture.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Tech Architecture</a></li>
+          <li><a href="performance_measurement.html" class="inline-block rounded-full bg-white text-om-navy border border-white/20 px-3 py-1.5 text-sm font-semibold transition">Performance Measurement</a></li>
+          <li><a href="implementation_roadmap.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Implementation Roadmap</a></li>
+          <li><a href="financial_profile.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Financial Profile</a></li>
+          <li><a href="full-document.html" class="inline-block rounded-full bg-white/10 hover:bg-white text-white hover:text-om-navy border border-white/20 hover:border-white px-3 py-1.5 text-sm font-semibold transition">Full Strategy</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE CONTENT (Performance Measurement) ===== -->
+  <main class="p-6 sm:p-10 lg:p-12">
+    <h2 class="text-3xl sm:text-5xl font-extrabold text-om-navy text-center mb-6 border-b-4 border-om-navy/10 pb-4">Performance Measurement and KPIs</h2>
+    
+    <!-- Introduction Section -->
+    <section class="mb-12 p-6 bg-om-navy/5 rounded-xl shadow-inner border-l-4 border-om-teal">
+      <p class="text-lg leading-relaxed text-gray-700">
+        To ensure the strategy stays on track and delivers the intended results, OMSB will implement a **robust performance measurement and evaluation framework**. This framework will use a set of Key Performance Indicators (KPIs) aligned with both OMSB’s strategic objectives and the national Digital Transformation Excellence criteria. Regular monitoring of these KPIs will enable OMSB leadership to gauge progress, make data-driven adjustments, and demonstrate success to stakeholders. The key elements of the performance management approach are:
+      </p>
+    </section>
+
+    <!-- Detailed Pillars Section -->
+    <section class="grid lg:grid-cols-2 gap-8">
+      
+      <!-- 1. Alignment with National Excellence Framework -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Alignment (Target) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Alignment with National Excellence Framework</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          OMSB’s KPIs are mapped to the Government’s three perspectives of digital excellence – **Digital Services Maturity, Institutional Readiness, and Actual Impact**. This ensures OMSB is tracking what matters not just internally but also in the eyes of national evaluators. For the Digital Services Maturity perspective (which often accounts for ~30% of the score), OMSB will track indicators such as - **Service Catalog Completion** (target 100% by 2026); **Process Simplification** (aiming for 100% by 2031, with interim targets like ~30% by 2026 and ~70% by 2029); **Service Automation** (target 100% by 2031, intermediate 50% by 2028); **Multi-channel Availability** (goal - all major services on at least web and mobile by 2027); **User Satisfaction** (targeting ≥90% satisfaction by 2031); **Service Usage Rate** (target ~90% online usage by 2031); and **Continuous Improvement** (number of service improvements implemented annually based on user feedback). These KPIs mirror the key facets of service maturity - coverage, quality, automation, accessibility, user experience, and improvement frequency.
+        </p>
+      </div>
+
+      <!-- 2. Institutional Readiness & Efficiency KPIs -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Readiness (Gear/Cog) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0-.33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9v-.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0 .33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33h.09a1.65 1.65 0 0 0 1.51 1 1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1.51 1v.09a1.65 1.65 0 0 0 .33 1.82z"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Institutional Readiness & Efficiency KPIs</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          For the Institutional Readiness perspective (~40% weight in the framework), OMSB will monitor metrics that reflect internal capacity and governance. These include - **Strategy Implementation Progress** (>90% on-time delivery each year); **IT Governance Maturity** (“managed” or “optimized” level by 2031); **Compliance Score** (100% compliance by 2027); **Business Continuity Readiness** (RTO fulfillment in drills by 2028); **Enterprise Architecture Maturity** (high maturity by 2029); **Workforce Digital Capacity** (% of staff who have completed advanced digital training - target 50% by 2031); **Change Management Metrics** (upward trend in staff openness); **Data Analytics Usage** (all key decisions to be data-informed by 2031); **Project Delivery Performance** (>85% adherence, improving to >95% by 2032); **Advanced Technology Adoption** (# of AI/emerging tech solutions in production); **Operational Efficiency Gains** (improved trainee-to-admin staff ratio); **Integration with Shared Platforms** (all relevant national platform integrations by 2027); and **Security Posture** (e.g. number of significant security incidents - target zero breaches). These indicators will demonstrate that OMSB is building the internal muscle (people, processes, tech infrastructure) to sustain digital transformation.
+        </p>
+      </div>
+
+      <!-- 3. Actual Impact & Outcomes KPIs -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Impact (Trophy/Success) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><path d="M11 15h2l-2 5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"/><path d="M21 16V6"/><path d="M15 16h6"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Actual Impact & Outcomes KPIs</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          The Actual Impact perspective (~30% weight) looks at the tangible results of digital transformation on stakeholders and organizational outcomes. OMSB will measure - **Service Simplification/Automation Outcomes** (meet/exceed annual goals); **Integration Benefits** (data exchange volume, reduction in manual verifications); **Beneficiary Satisfaction** (aiming for an upward trend to ≥90% by 2031); **Data Sharing Readiness** (open data readiness by 2029); **Cost Savings/Avoidance** (target to realize significant cumulative savings by 2031); and **Outcome Improvements** (linking digital efforts to core mission outcomes, e.g., improvement in exam pass rates, reduction in time to fill residency slots, improved accreditation review times). These speak to how digital transformation has improved the end results that matter – such as quality of education, service quality, and stakeholder trust.
+        </p>
+      </div>
+
+      <!-- 4. Digital Transformation Scorecard -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Scorecard (Checklist/Score) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><rect x="3" y="5" width="18" height="14" rx="2" ry="2"/><path d="M7 10h10"/><path d="M7 14h10"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Digital Transformation Scorecard</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          OMSB will compile all these KPIs into a **Digital Transformation Scorecard** that will be reviewed **quarterly** by the DT Steering Committee and annually by top leadership. This scorecard will essentially mirror the government’s evaluation but with more granular internal metrics. It will use **traffic-light indicators** (green/yellow/red) to show progress against targets for each KPI. The Steering Committee will use this to identify lagging areas and mandate corrective actions. The scorecard ensures accountability – if a metric is off-track, there’s clear visibility and impetus to address it. By aligning it with the national excellence criteria, OMSB also keeps itself prepared for formal evaluations (essentially doing a self-assessment continuously).
+        </p>
+      </div>
+      
+      <!-- 5. Monitoring Tools and Processes -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300 lg:col-span-1">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Monitoring (Dashboard) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Monitoring Tools and Processes</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          Many KPIs will be tracked through the new digital systems themselves, reducing manual data collection. OMSB plans to implement a central **KPI Dashboard by 2027** that automatically pulls live data from various systems (portal analytics, service management systems, etc.) for near-real-time monitoring. In addition, OMSB will produce an **Annual Digital Transformation Report** starting in 2026, summarizing progress, KPI achievements, challenges, and priorities. This report will be submitted to OMSB’s Board and shared with the national digital transformation program office. Furthermore, OMSB will actively participate in any government-run assessments or audits, ensuring evidence is prepared for each required indicator. The organization’s aim is not to “chase a score” but to ensure that meeting those indicators is a byproduct of genuinely improved performance.
+        </p>
+      </div>
+      
+      <!-- 6. Stakeholder Feedback and Adaptation -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300 lg:col-span-1">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Feedback (Message/Conversation) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Stakeholder Feedback and Adaptation</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          Quantitative KPIs will be complemented by **qualitative feedback mechanisms**. OMSB will establish **continuous feedback loops** with its stakeholders - for example, embedding post-service satisfaction surveys, conducting an annual survey of residents/fellows, and organizing focus groups or user councils. Metrics like **Net Promoter Score (NPS)** might be tracked to gauge overall sentiment. A reduction in certain types of complaints will be a sign of success, while recurring complaints will trigger a root cause analysis. By Phase 2, OMSB could even employ **sentiment analysis** on social media to pick up external perceptions. Regular stakeholder input ensures OMSB remains responsive and user-focused, and provides early warning of issues not captured by internal metrics.
+        </p>
+      </div>
+      
+      <!-- 7. Benefits Realization Tracking -->
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-om-teal/20 hover:shadow-2xl transition duration-300 lg:col-span-2">
+        <div class="flex items-center mb-4">
+          <!-- Icon for Benefits (Growth) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mr-3"><path d="M3 3v18h18"/><path d="M18 17 9 8"/><path d="m18 8h-5"/><path d="m18 8v5"/></svg>
+          <h4 class="text-2xl font-bold text-om-navy">Benefits Realization Tracking</h4>
+        </div>
+        <p class="text-gray-700 leading-relaxed text-sm">
+          For each major project under the strategy, OMSB will define **expected benefits at the start** (e.g. “reduce application processing from 30 days to 10 days”) and then measure after implementation to confirm if the benefit was achieved. This practice of **benefits realization** ensures the strategy delivers real-world value, not just system deployments. If a benefit falls short – say the average processing time is still 15 days instead of the targeted 10 – OMSB will investigate why (perhaps users aren’t using the system correctly, or maybe an external dependency still causes delay) and address it. Benefits tracking will be part of the project close-out reports and will be overseen by the Steering Committee as well. This disciplined approach ties the strategy activities back to the outcomes that matter (time savings, cost savings, quality improvements) and helps course-correct if a project isn’t delivering as expected.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- KPI Table Section -->
+    <section class="mt-12">
+      <h3 class="text-3xl font-bold text-om-navy mb-4 border-b border-om-navy/10 pb-2">Table: OMSB Digital Strategy – Performance Measures & KPIs</h3>
+      <div class="overflow-x-auto rounded-lg shadow-xl">
+        <table class="w-full kpi-table border-collapse">
+          <thead>
+            <tr>
+              <th class="w-1/6">Perspective / Element</th>
+              <th class="w-1/5">Focus Areas</th>
+              <th class="w-2/5">KPIs / Metrics</th>
+              <th class="w-1/4">Targets / Milestones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Digital Services Maturity -->
+            <tr class="perspective-row"><td colspan="4">Digital Services Maturity (~30%)</td></tr>
+            <tr class="focus-row"><td></td><td>Service Coverage & Quality</td><td>- Service Catalog Completion</td><td>100% by 2026</td></tr>
+            <tr class="focus-row"><td></td><td>Process Simplification</td><td>% of services re-engineered & simplified</td><td>~30% by 2026; ~70% by 2029; 100% by 2031</td></tr>
+            <tr class="focus-row"><td></td><td>Service Automation</td><td>% of services fully digital (end-to-end)</td><td>≥50% by 2028; 100% by 2031</td></tr>
+            <tr class="focus-row"><td></td><td>Multi-channel Availability</td><td>Services on multiple channels (web + mobile)</td><td>All major services by 2027</td></tr>
+            <tr class="focus-row"><td></td><td>User Satisfaction</td><td>Satisfaction surveys</td><td>≥90% by 2031</td></tr>
+            <tr class="focus-row"><td></td><td>Service Usage Rate</td><td>% of transactions online vs. traditional</td><td>~90% by 2031</td></tr>
+            <tr class="focus-row"><td></td><td>Continuous Improvement</td><td># of service improvements implemented annually</td><td>Ongoing – at least 1+ per year, continuous</td></tr>
+            
+            <!-- Institutional Readiness & Efficiency -->
+            <tr class="perspective-row"><td colspan="4">Institutional Readiness & Efficiency (~40%)</td></tr>
+            <tr class="focus-row"><td></td><td>Governance & Strategy Delivery</td><td>- Strategy Implementation Progress</td><td>≥90% on-time delivery annually</td></tr>
+            <tr class="focus-row"><td></td><td>IT Governance Maturity</td><td>Level on maturity model</td><td>“Managed/Optimized” by 2031</td></tr>
+            <tr class="focus-row"><td></td><td>Compliance Score</td><td>% ICT compliance</td><td>100% by 2027 onward</td></tr>
+            <tr class="focus-row"><td></td><td>Business Continuity</td><td>RTO fulfillment in drills</td><td>All tests successful by 2028</td></tr>
+            <tr class="focus-row"><td></td><td>Enterprise Architecture</td><td>EA maturity score</td><td>High maturity by 2029</td></tr>
+            <tr class="focus-row"><td></td><td>Workforce Digital Capacity</td><td>% staff with advanced training</td><td>50% by 2031; 100% by 2036</td></tr>
+            <tr class="focus-row"><td></td><td>Change Management Metrics</td><td>Staff openness index; # of innovation ideas</td><td>Upward trend year by year</td></tr>
+            <tr class="focus-row"><td></td><td>Data Analytics Usage</td><td>% of management meetings with analytics insights</td><td>All major decisions data-informed by 2031</td></tr>
+            <tr class="focus-row"><td></td><td>Project Delivery</td><td>% projects on-time/on-budget</td><td>>85% annually; >95% by 2032</td></tr>
+            <tr class="focus-row"><td></td><td>Advanced Tech Adoption</td><td># of AI/emerging tech solutions in production</td><td>At least several by 2031</td></tr>
+            <tr class="focus-row"><td></td><td>Operational Efficiency</td><td>Trainee-to-admin staff ratio</td><td>Improved efficiency (handle more trainees/admin)</td></tr>
+            <tr class="focus-row"><td></td><td>Integration with National Platforms</td><td># of integrations achieved</td><td>All relevant by 2027; new ones continuously</td></tr>
+            <tr class="focus-row"><td></td><td>Security Posture</td><td># of major incidents; vulnerability closure</td><td>Zero breaches; timely closure</td></tr>
+
+            <!-- Actual Impact & Outcomes -->
+            <tr class="perspective-row"><td colspan="4">Actual Impact & Outcomes (~30%)</td></tr>
+            <tr class="focus-row"><td></td><td>Service Results</td><td>- # of services simplified/automated vs. target</td><td>Meet/exceed annual goals</td></tr>
+            <tr class="focus-row"><td></td><td>Integration Benefits</td><td>Usage of national integrations; reduced manual verifications</td><td>Demonstrable by 2027 onward</td></tr>
+            <tr class="focus-row"><td></td><td>Beneficiary Satisfaction</td><td>External user satisfaction, NPS</td><td>Upward trend; ≥90% by 2031</td></tr>
+            <tr class="focus-row"><td></td><td>Data Sharing Readiness</td><td># of datasets shared; time to fulfill requests</td><td>Open data readiness by 2029</td></tr>
+            <tr class="focus-row"><td></td><td>Cost Savings & Avoidance</td><td>Financial savings/efficiency gains</td><td>Significant cumulative savings by 2031</td></tr>
+            <tr class="focus-row"><td></td><td>Outcome Improvements</td><td>Impact on exam pass rates, accreditation, time to fill slots</td><td>Steady improvement aligned with digital rollout</td></tr>
+            
+            <!-- Governance & Tracking Mechanisms -->
+            <tr class="perspective-row"><td colspan="4">Governance & Tracking Mechanisms</td></tr>
+            <tr class="focus-row"><td>Digital Transformation Scorecard</td><td>KPI Tracking & Governance</td><td>Quarterly & annual scorecard (traffic-light indicators)</td><td>In place by 2026; reviewed quarterly by DTSC</td></tr>
+            <tr class="focus-row"><td>Monitoring Tools & Processes</td><td>KPI Dashboards & Reports</td><td>Central KPI Dashboard; Annual Digital Transformation Report</td><td>Dashboard live by 2027; annual reports from 2026</td></tr>
+            <tr class="focus-row"><td>Stakeholder Feedback & Adaptation</td><td>Continuous Feedback Loops</td><td>Post-service surveys, annual resident/fellow survey, focus groups, NPS, complaints analysis, sentiment analysis</td><td>In place 2026; expanded with AI sentiment analysis in Phase 2</td></tr>
+            <tr class="focus-row"><td>Benefits Realization Tracking</td><td>Project-Level Outcomes</td><td>Benefits defined per project; tracked in close-out reports</td><td>From 2026 onward; corrective action if benefits missed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="mt-12 py-8 bg-om-gold/10 rounded-xl shadow-md border-l-4 border-om-gold">
+      <h4 class="text-xl font-bold text-om-navy px-6 mb-3">Compass and Dashboard</h4>
+      <p class="text-lg text-gray-700 leading-relaxed px-6">
+        By implementing this comprehensive performance management approach, OMSB ensures **transparency and accountability** throughout the transformation. The leadership will have visibility at all times into what’s working and what’s not, enabling proactive management. Moreover, by aligning with national KPIs and continuously measuring progress, OMSB positions itself to achieve high scores in formal digital government evaluations – but more importantly, to truly realize the promised improvements in service delivery and institutional capacity. As this is a long-term transformation, these monitoring mechanisms serve as the **compass and dashboard** that keep OMSB guided toward its 2036 targets, ensuring the journey yields real benefits at every stage.
+      </p>
+    </section>
+  </main>
+  <!-- ===== GLOBAL FOOTER (do not remove) ===== -->
+  <footer class="p-6 text-center text-sm text-gray-500 border-t border-gray-200 bg-gray-50">
+    Digital Transformation Initiative | OMSB | 2026–2035
+  </footer>
+</div>
+</body>
+</html>
