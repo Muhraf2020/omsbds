@@ -159,6 +159,189 @@
     </section>
   </main>
 
+<!-- ===== Digital Integration Connectivity (drop-in) ===== -->
+<style>
+  /* Scope variables/styles to this block so Tailwind arbitrary colors using CSS vars work */
+  .integration-arch{
+    --color-primary:#004D40;      /* Deep Teal */
+    --color-accent:#26A69A;       /* Medium Teal */
+    --color-background:#F7FAFC;   /* Light Gray */
+    font-family:'Inter',sans-serif;
+  }
+  .integration-arch .container-card{
+    background-color:#fff;border-radius:1.5rem;
+    box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.05);
+    padding:2rem;
+  }
+  .integration-arch .section-heading-lg{ border-left:6px solid var(--color-accent); color:var(--color-primary); }
+  .integration-arch .integration-card{
+    display:flex;flex-direction:column;border-radius:1rem;overflow:hidden;
+    box-shadow:0 4px 8px -2px rgba(0,0,0,.1);transition:transform .3s, box-shadow .3s;
+  }
+  .integration-arch .integration-card:hover{ transform:translateY(-4px); box-shadow:0 10px 15px -3px rgba(0,0,0,.2); }
+  .integration-arch .card-header{ padding:1.5rem;color:#fff;font-weight:700;display:flex;align-items:center;gap:1rem;font-size:1.25rem; }
+  .integration-arch .card-content{ padding:1.5rem;background-color:#fff;flex-grow:1; }
+  .integration-arch .card-key-fact{ background-color:#f3f4f6;padding:.75rem 1.5rem;font-size:.875rem;font-weight:600;border-top:1px dashed #e5e7eb; }
+  .integration-arch .timeline-item{ position:relative;padding-left:2rem; }
+  .integration-arch .timeline-item::before{
+    content:'';position:absolute;left:0;top:.5rem;width:10px;height:10px;border-radius:50%;
+    background-color:var(--color-primary);border:2px solid #fff;
+  }
+</style>
+
+<div class="integration-arch p-4 md:p-8 lg:p-12">
+  <main class="max-w-7xl mx-auto space-y-12">
+
+    <!-- Core Integration Pillars -->
+    <section class="container-card">
+      <h2 class="text-2xl font-bold text-[--color-primary] mb-8">Four Pillars of National Data & Service Integration (Phase 1 Focus)</h2>
+
+      <div class="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
+        <!-- Pillar 1: MoH EHR (Nabd Al Shifa) -->
+        <div class="integration-card">
+          <div class="card-header bg-red-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14h-3a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h3"/><path d="M19 14l-4-4-6 6-4-4"/></svg>
+            EHR (Nabd Al Shifa)
+          </div>
+          <div class="card-content">
+            <h3 class="font-semibold text-gray-700 mb-2">Technical Action (By 2027)</h3>
+            <ul class="text-sm text-gray-600 list-disc ml-4 space-y-1">
+              <li>Secure, two-way data exchange.</li>
+              <li>Utilize <strong>HL7/FHIR APIs</strong> for real-time exchange.</li>
+            </ul>
+            <h3 class="font-semibold text-gray-700 mt-4 mb-2">Business Outcome</h3>
+            <p class="text-sm text-gray-800 font-medium">Link trainee logbooks to <strong>actual patient cases</strong> and automatically update MoH HR systems with <strong>verified certification status</strong>.</p>
+          </div>
+          <div class="card-key-fact bg-red-100 text-red-900">
+            <span class="font-bold">Result:</span> Robust Clinical Verification & Workforce Planning
+          </div>
+        </div>
+
+        <!-- Pillar 2: National Unified Services Portal -->
+        <div class="integration-card">
+          <div class="card-header bg-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M14 22v-4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4"/></svg>
+            Unified Services Portal
+          </div>
+          <div class="card-content">
+            <h3 class="font-semibold text-gray-700 mb-2">Technical Action (By 2026)</h3>
+            <ul class="text-sm text-gray-600 list-disc ml-4 space-y-1">
+              <li>Onboard all public-facing services (eligibility, process, fees).</li>
+              <li>Enable <strong>Single Sign-On (SSO)</strong> via national eID (Tam/PKI).</li>
+            </ul>
+            <h3 class="font-semibold text-gray-700 mt-4 mb-2">Business Outcome</h3>
+            <p class="text-sm text-gray-800 font-medium">Implements the <strong>"no wrong door"</strong> policy, improves user convenience, and drives service discovery/uptake.</p>
+          </div>
+          <div class="card-key-fact bg-blue-100 text-blue-900">
+            <span class="font-bold">Result:</span> Seamless Access & Improved User Experience
+          </div>
+        </div>
+
+        <!-- Pillar 3: National Identity Hub -->
+        <div class="integration-card">
+          <div class="card-header bg-purple-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 7v10"/><path d="M15 7v10"/></svg>
+            Digital Identity Hub
+          </div>
+          <div class="card-content">
+            <h3 class="font-semibold text-gray-700 mb-2">Technical Action (By 2026)</h3>
+            <ul class="text-sm text-gray-600 list-disc ml-4 space-y-1">
+              <li>Connect to National Beneficiary Data Hub (Civil Registration).</li>
+              <li>Use national ID as the unique key.</li>
+            </ul>
+            <h3 class="font-semibold text-gray-700 mt-4 mb-2">Business Outcome</h3>
+            <p class="text-sm text-gray-800 font-medium"><strong>Auto-validate</strong> and <strong>auto-fill</strong> basic applicant data, reducing errors and ensuring data consistency across all OMSB records.</p>
+          </div>
+          <div class="card-key-fact bg-purple-100 text-purple-900">
+            <span class="font-bold">Result:</span> High Data Accuracy & Verification Confidence
+          </div>
+        </div>
+
+        <!-- Pillar 4: NIP & Shared Services -->
+        <div class="integration-card">
+          <div class="card-header bg-teal-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H7"/><path d="M17 19H7"/><path d="M19 12l-7 7-7-7"/></svg>
+            NIP & Shared Services
+          </div>
+          <div class="card-content">
+            <h3 class="font-semibold text-gray-700 mb-2">Technical Action (By 2026)</h3>
+            <ul class="text-sm text-gray-600 list-disc ml-4 space-y-1">
+              <li>Centralized integration via <strong>National Integration Platform (NIP)</strong>.</li>
+              <li>Adopt Government ePayment and SMS Gateways.</li>
+            </ul>
+            <h3 class="font-semibold text-gray-700 mt-4 mb-2">Business Outcome</h3>
+            <p class="text-sm text-gray-800 font-medium">Replaces manual exchanges (Excel, letters) with <strong>API-based automation</strong> (e.g., auto-verifying degrees from MoHE). Avoids re-inventing common functions.</p>
+          </div>
+          <div class="card-key-fact bg-teal-100 text-teal-900">
+            <span class="font-bold">Result:</span> Process Automation & Operational Efficiency
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strategic Alignment and Future Reach -->
+    <section class="container-card">
+      <h2 class="text-2xl font-bold section-heading-lg pl-4 mb-6">Strategic Alignment & Future Integration Reach</h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- National Initiatives -->
+        <div>
+          <div class="p-5 border-l-4 border-amber-500 bg-amber-50 rounded-lg">
+            <h3 class="flex items-center text-xl font-bold text-amber-800 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 17a2 2 0 0 0 2 2h4"/><path d="M12 10V4"/><path d="M12 20v-4"/><path d="M4 14V9a2 2 0 0 1 2-2h1.5l1.5 1.5L12 11l-2 2-1.5-1.5H6a2 2 0 0 1-2-2z"/></svg>
+              National Initiatives (Continuous)
+            </h3>
+            <p class="text-sm text-gray-700 mb-4">Ensure OMSB data contributes to whole-of-government efforts like workforce planning and open data transparency.</p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="timeline-item text-gray-800 border-l border-gray-300">Contribute data to the <strong>National Health Workforce Planning System</strong>.</li>
+              <li class="timeline-item text-gray-800 border-l border-gray-300">Integrate with the <strong>National Continuing Education Platform</strong> (CPD).</li>
+              <li class="timeline-item text-gray-800 border-l border-gray-300">Publish anonymized datasets to the <strong>National Open Data Portal</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Regional & International -->
+        <div>
+          <div class="p-5 border-l-4 border-lime-500 bg-lime-50 rounded-lg">
+            <h3 class="flex items-center text-xl font-bold text-lime-800 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Regional & Global Reach (P2: 2029+)
+            </h3>
+            <p class="text-sm text-gray-700 mb-4">Position OMSB as a globally connected entity, facilitating professional mobility and maintaining international standards.</p>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="timeline-item text-gray-800 border-l border-gray-300">Achieve <strong>GCC-wide verification</strong> interoperability (e.g., with SCFHS).</li>
+              <li class="timeline-item text-gray-800 border-l border-gray-300">Integrate with <strong>Arab Board</strong> systems for mutual recognition.</li>
+              <li class="timeline-item text-gray-800 border-l border-gray-300">Join global <strong>Blockchain Credential Networks</strong> for verifiable diplomas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Decision-Maker Summary -->
+    <section class="container-card bg-gray-900 text-white border-t-8 border-yellow-400">
+      <h2 class="text-2xl font-extrabold text-yellow-400 mb-3">Strategic Value Proposition for Decision Makers</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-sm">
+        <div>
+          <p class="font-bold text-lg mb-1">1. Streamlined User Journey</p>
+          <p class="text-gray-300">Stakeholders (trainees, examiners, administrators) avoid shuttling between agencies and repeated paperwork. Data entered once serves multiple purposes.</p>
+        </div>
+        <div>
+          <p class="font-bold text-lg mb-1">2. Data Quality & Trust</p>
+          <p class="text-gray-300">Data is instantly validated against national authoritative sources (Civil ID, MoHE, MoH), reducing errors and ensuring that OMSB certifications are immediately recognized as legitimate.</p>
+        </div>
+        <div>
+          <p class="font-bold text-lg mb-1">3. Government Alignment</p>
+          <p class="text-gray-300">Directly addresses key government excellence indicators (e.g., “integration with shared platforms”), improving OMSB's public value and standing as an integral part of the <strong>One-Government digital ecosystem</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+<!-- ===== /Digital Integration Connectivity (drop-in) ===== -->
+
+  
 <!-- ===== GLOBAL FOOTER (do not remove) ===== -->
 <footer class="p-6 text-center text-sm text-gray-500 border-t border-gray-200 bg-gray-50">
   Digital Transformation Initiative | OMSB | 2026–2035
