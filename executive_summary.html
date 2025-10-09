@@ -74,6 +74,327 @@
       </p>
     </div>
 
+<!-- ===== Executive Summary Additions (paste inside <main>) ===== -->
+<style>
+  /* Scope everything to avoid conflicts */
+  .exec-additions {
+    --primary-color: #007bff;
+    --accent-color: #fca311;
+    --bg-color: #f9fafb;
+    --text-color: #1f2937;
+    --card-hover-shadow: 0 20px 25px -5px rgba(0,0,0,.10), 0 10px 10px -5px rgba(0,0,0,.04);
+  }
+  .exec-additions .icon-box {
+    transition: all .3s cubic-bezier(.175,.885,.32,1.275);
+  }
+  .exec-additions .icon-box:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: var(--card-hover-shadow);
+    border-color: var(--accent-color);
+  }
+  .exec-additions .progress-bar {
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 9999px;
+    transition: width .6s ease-out;
+  }
+  .exec-additions #details-panel {
+    background:#fff;
+    border-radius:12px;
+    border-left:6px solid var(--primary-color);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1);
+  }
+  /* Timeline center line (already responsive with Tailwind util classes below) */
+</style>
+
+<div class="exec-additions">
+
+  <!-- HEADER & CORE VISION (executive summary) -->
+  <header class="text-center mb-10">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
+      OMSB Digital Transformation Strategy
+    </h1>
+    <p class="mt-2 text-xl text-gray-500 font-medium">
+      Roadmap to Regional Leadership (2026–2035)
+    </p>
+    <div class="mt-6 flex justify-center gap-6 text-lg font-semibold">
+      <span class="text-indigo-600 flex items-center">
+        <i data-lucide="calendar-check" class="w-5 h-5 mr-2"></i> 10-Year Plan
+      </span>
+      <span class="text-green-600 flex items-center">
+        <i data-lucide="gauge" class="w-5 h-5 mr-2"></i> OMR 22.2M Investment
+      </span>
+      <span class="text-yellow-600 flex items-center">
+        <i data-lucide="crown" class="w-5 h-5 mr-2"></i> Regional Leader by 2036
+      </span>
+    </div>
+  </header>
+
+  <!-- Dynamic Information Panel -->
+  <div id="details-panel" class="p-5 mb-10 transition-all duration-300">
+    <h3 id="panel-title" class="text-2xl font-bold text-gray-800 mb-2">
+      Hover Over an Item Below for Details
+    </h3>
+    <p id="panel-description" class="text-gray-600">
+      Explore the strategic pillars and key outcomes that define OMSB's digital future.
+    </p>
+  </div>
+
+  <!-- STRATEGIC PILLARS -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-2 border-indigo-100">
+      6 Strategic Pillars (The “How”)
+    </h2>
+    <div id="pillars-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- JS will inject cards -->
+    </div>
+  </section>
+
+  <!-- KEY OUTCOMES -->
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-2 border-indigo-100">
+      Key Outcomes by 2035 (The “What”)
+    </h2>
+    <div id="outcomes-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- JS will inject cards -->
+    </div>
+  </section>
+
+  <!-- TRANSFORMATION PHASING TIMELINE -->
+  <section>
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-2 pb-2 border-indigo-100">
+      Transformation Phasing
+    </h2>
+    <div class="relative max-w-5xl mx-auto">
+      <div class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-indigo-200 hidden sm:block"></div>
+
+      <div class="space-y-12">
+        <!-- Phase 1 -->
+        <div class="flex items-center justify-between sm:odd:flex-row-reverse w-full">
+          <div class="w-full sm:w-1/2 sm:odd:pr-10 sm:even:pl-10">
+            <div class="bg-indigo-600 text-white p-5 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.01]">
+              <h3 class="text-xl font-bold mb-1">Phase 1: Foundation (2026–2028)</h3>
+              <p class="text-sm">Core infrastructure, integration, and quick-win e-services.</p>
+            </div>
+          </div>
+          <div class="hidden sm:block w-4 h-4 rounded-full bg-indigo-600 absolute left-1/2 -translate-x-1/2 ring-4 ring-white shadow-md z-10"></div>
+          <div class="hidden sm:block w-1/2"></div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="flex items-center justify-between sm:odd:flex-row-reverse w-full">
+          <div class="w-full sm:w-1/2 sm:odd:pr-10 sm:even:pl-10">
+            <div class="bg-indigo-600 text-white p-5 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.01]">
+              <h3 class="text-xl font-bold mb-1">Phase 2: Optimization & Expansion (2029–2032)</h3>
+              <p class="text-sm">Advanced analytics, AI, blockchain credentialing, full service digitization.</p>
+            </div>
+          </div>
+          <div class="hidden sm:block w-4 h-4 rounded-full bg-indigo-600 absolute left-1/2 -translate-x-1/2 ring-4 ring-white shadow-md z-10"></div>
+          <div class="hidden sm:block w-1/2"></div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="flex items-center justify-between sm:odd:flex-row-reverse w-full">
+          <div class="w-full sm:w-1/2 sm:odd:pr-10 sm:even:pl-10">
+            <div class="bg-indigo-600 text-white p-5 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.01]">
+              <h3 class="text-xl font-bold mb-1">Phase 3: Continuous Innovation (2033–2036)</h3>
+              <p class="text-sm">Institutionalizing innovation, predictive planning, global interoperability.</p>
+            </div>
+          </div>
+          <div class="hidden sm:block w-4 h-4 rounded-full bg-indigo-600 absolute left-1/2 -translate-x-1/2 ring-4 ring-white shadow-md z-10"></div>
+          <div class="hidden sm:block w-1/2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  // Auto-load Lucide if not present
+  (function ensureLucide(cb){
+    if (window.lucide && typeof window.lucide.createIcons === 'function') return cb();
+    const s = document.createElement('script');
+    s.src = "https://unpkg.com/lucide@latest";
+    s.onload = cb;
+    document.currentScript.parentNode.insertBefore(s, document.currentScript);
+  })(function initExecSummary(){
+
+    const detailsData = {
+      pillars: {
+        pillar1: {
+          title: "Modernize & Automate Core Processes",
+          icon: "Zap",
+          color: "text-red-500",
+          description: "End-to-end digitization and simplification of all OMSB services and workflows, moving to faster, paperless operations."
+        },
+        pillar2: {
+          title: "Unify Data & Break Down Silos",
+          icon: "Database",
+          color: "text-indigo-500",
+          description: "Creation of a single source of truth via a secure cloud data lake, data warehouse, and Master Professional Index (MPI)."
+        },
+        pillar3: {
+          title: "Embed Analytics & AI",
+          icon: "BarChart3",
+          color: "text-green-500",
+          description: "Integration of real-time dashboards, predictive analytics, and AI tools to drive data-informed decisions and proactive support."
+        },
+        pillar4: {
+          title: "Deliver User-Centric Experiences",
+          icon: "Users",
+          color: "text-yellow-500",
+          description: "Development of mobile-first, multi-channel digital services with a unified portal and single sign-on for all stakeholders."
+        },
+        pillar5: {
+          title: "Strengthen Governance & Security",
+          icon: "Gavel",
+          color: "text-purple-500",
+          description: "Establish robust IT governance, cybersecurity frameworks, and compliance programs (including ISO standards and national policies)."
+        },
+        pillar6: {
+          title: "Empower Workforce & Foster Innovation",
+          icon: "Rocket",
+          color: "text-pink-500",
+          description: "Comprehensive change management, staff upskilling, and an innovation culture to ensure adoption and continuous improvement."
+        }
+      },
+      outcomes: {
+        outcome1: {
+          title: "Process Excellence",
+          icon: "Clock",
+          color: "text-blue-600",
+          metric: "Reduce certification cycle times by 60% and achieve 95% on-time exam result publication.",
+          value: 60,
+          unit: "% Reduction"
+        },
+        outcome2: {
+          title: "Interoperability",
+          icon: "Link",
+          color: "text-emerald-600",
+          metric: "Achieve API-driven integration across all OMSB systems and two-way data exchange with Nabd Al Shifa EHR.",
+          value: 100,
+          unit: "% Integration"
+        },
+        outcome3: {
+          title: "Advanced Analytics & AI",
+          icon: "Brain",
+          color: "text-orange-600",
+          metric: "Deploy predictive workforce modeling and ‘at-risk trainee’ early-alert systems.",
+          value: 75,
+          unit: "% AI Deployment"
+        },
+        outcome4: {
+          title: "User Experience",
+          icon: "Smartphone",
+          color: "text-fuchsia-600",
+          metric: "Attain ≥90% user satisfaction via mobile-first services and digital credential wallets.",
+          value: 90,
+          unit: "% Satisfaction"
+        },
+        outcome5: {
+          title: "Governance & Security",
+          icon: "Shield",
+          color: "text-teal-600",
+          metric: "Achieve ISO 27001 certification and 100% WCAG 2.1 AA accessibility compliance.",
+          value: 100,
+          unit: "% Compliance"
+        },
+        outcome6: {
+          title: "Sustainability",
+          icon: "Leaf",
+          color: "text-amber-600",
+          metric: "Establish an 'evergreen' IT environment with ≥50% spare system capacity; evolve MASAR to self-financing by 2036.",
+          value: 50,
+          unit: "% Capacity Buffer"
+        }
+      }
+    };
+
+    const panelTitle = document.getElementById('panel-title');
+    const panelDescription = document.getElementById('panel-description');
+    const defaultTitle = "Hover Over an Item Below for Details";
+    const defaultDescription = "Explore the strategic pillars and key outcomes that define OMSB's digital future.";
+
+    function clamp01(x){ return Math.max(0, Math.min(1, x)); }
+
+    function updateDetailsPanel(title, description, metricValue, metricUnit, iconHtml) {
+      panelTitle.innerHTML = `<div class="flex items-center">${iconHtml ? iconHtml + ' ' : ''}${title}</div>`;
+      panelDescription.innerHTML = description || "";
+
+      if (metricValue !== undefined) {
+        const pct = Math.round(clamp01(metricValue/100) * 100);
+        panelDescription.innerHTML += `
+          <div class="mt-4 pt-3 border-t border-gray-100">
+            <p class="text-sm font-semibold text-gray-700">
+              Target Progress:
+              <span class="text-indigo-600">${metricValue}${metricUnit ? ' ' + metricUnit : ''}</span>
+            </p>
+            <div class="bg-gray-200 rounded-full mt-1">
+              <div class="progress-bar" style="width:${pct}%"></div>
+            </div>
+          </div>`;
+      }
+      window.lucide && window.lucide.createIcons();
+    }
+
+    function resetDetailsPanel() {
+      setTimeout(() => {
+        panelTitle.textContent = defaultTitle;
+        panelDescription.textContent = defaultDescription;
+      }, 50);
+    }
+
+    // Build Pillar Cards
+    const pillarsContainer = document.getElementById('pillars-container');
+    Object.keys(detailsData.pillars).forEach(key => {
+      const d = detailsData.pillars[key];
+      const card = document.createElement('div');
+      card.className = "icon-box bg-white p-6 rounded-xl border border-gray-200 cursor-pointer transition duration-300 ease-in-out hover:border-indigo-400";
+      card.onmouseover = () => {
+        const icon = `<i data-lucide="${d.icon}" class="w-6 h-6 mr-3 ${d.color}"></i>`;
+        updateDetailsPanel(d.title, d.description, undefined, undefined, icon);
+      };
+      card.onmouseleave = resetDetailsPanel;
+
+      card.innerHTML = `
+        <div class="${d.color} mb-3"><i data-lucide="${d.icon}" class="w-8 h-8"></i></div>
+        <h4 class="text-lg font-bold text-gray-800">${d.title}</h4>
+        <p class="text-sm text-gray-500 mt-1">${d.description.substring(0, 70)}...</p>
+      `;
+      pillarsContainer.appendChild(card);
+    });
+
+    // Build Outcome Cards
+    const outcomesContainer = document.getElementById('outcomes-container');
+    Object.keys(detailsData.outcomes).forEach(key => {
+      const d = detailsData.outcomes[key];
+      const card = document.createElement('div');
+      card.className = "icon-box bg-white p-6 rounded-xl border border-gray-200 cursor-pointer transition duration-300 ease-in-out hover:border-indigo-400";
+      card.onmouseover = () => {
+        const icon = `<i data-lucide="${d.icon}" class="w-6 h-6 mr-3 ${d.color}"></i>`;
+        updateDetailsPanel(d.title, d.metric, d.value, d.unit, icon);
+      };
+      card.onmouseleave = resetDetailsPanel;
+
+      const showPct = (typeof d.value === 'number' && d.unit && d.unit.includes('%')) ? `${d.value}%` : d.value;
+      card.innerHTML = `
+        <div class="flex items-center justify-between mb-3">
+          <div class="${d.color}"><i data-lucide="${d.icon}" class="w-7 h-7"></i></div>
+          <span class="text-2xl font-extrabold ${d.color}">${showPct}</span>
+        </div>
+        <h4 class="text-lg font-bold text-gray-800">${d.title}</h4>
+        <p class="text-sm text-gray-500 mt-1">${d.metric}</p>
+      `;
+      outcomesContainer.appendChild(card);
+    });
+
+    // Render icons once everything is in the DOM
+    window.lucide && window.lucide.createIcons();
+  });
+</script>
+<!-- ===== /Executive Summary Additions ===== -->
+
     <!-- Key Outcomes Section -->
     <section class="mb-10">
       <h3 class="text-2xl font-bold text-om-navy mb-6 border-b-2 border-om-navy/20 pb-2">Key Outcomes by 2035</h3>
