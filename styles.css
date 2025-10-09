@@ -230,4 +230,58 @@ main h2.text-om-navy {
   .peer-group-small::before { display:none; }
 }
 
+<style>
+  /* Dashed advisory connectors from SC → advisory decision forums */
+  .peer-group.advisory { padding-top: 1.5rem; position: relative; }
+  .peer-group.advisory::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 0; border-top: 2px dashed var(--line-color);
+    z-index: 1;
+  }
+  .peer-group.advisory > .org-box {
+    margin-left: 0.5rem; margin-right: 0.5rem;
+    margin-top: -1.5rem; margin-bottom: 3.5rem;
+    position: relative;
+  }
+  .peer-group.advisory > .org-box::after {
+    content: '';
+    position: absolute; top: -1.5rem; left: 50%; transform: translateX(-50%);
+    width: 0; height: 1.5rem; border-left: 2px dashed var(--line-color);
+    z-index: 2;
+  }
+
+  /* Single-box reporting group under SC (keeps the same connector look) */
+  .peer-group.single { padding-top: 1.5rem; position: relative; }
+  .peer-group.single::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px; background-color: var(--line-color);
+    z-index: 1;
+  }
+  .peer-group.single > .org-box {
+    margin-top: -1.5rem; margin-bottom: 3.5rem;
+  }
+  .peer-group.single > .org-box::after {
+    content: '';
+    position: absolute; top: -1.5rem; left: 50%; transform: translateX(-50%);
+    width: 2px; height: 1.5rem; background-color: var(--line-color);
+    z-index: 2;
+  }
+
+  /* Mobile: keep advisory stubs dashed */
+  @media (max-width: 1023px) {
+    .peer-group.advisory::before { display: none; }
+    .peer-group.advisory > .org-box {
+      width: calc(50% - 1rem); margin: 0.5rem; margin-bottom: 3.5rem; margin-top: 0;
+    }
+    .peer-group.advisory > .org-box::after {
+      top: auto; bottom: -3.5rem; height: 3.5rem;
+    }
+    .peer-group.single::before { display: none; }
+    .peer-group.single > .org-box::after {
+      top: auto; bottom: -3.5rem; height: 3.5rem;
+    }
+  }
+</style>
 
