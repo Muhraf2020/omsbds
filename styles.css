@@ -142,3 +142,22 @@ main h2.text-om-navy {
 .cms-page table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
 .cms-page th, .cms-page td { border: 1px solid #e5e7eb; padding: .5rem .75rem; }
 .cms-page img { max-width: 100%; border-radius: .5rem; }
+
+
+/* Governance page helpers */
+.infographic-section-title { color: var(--color-primary-navy); border-bottom: 4px solid var(--color-accent-gold); padding-bottom: 0.5rem; }
+.hierarchy-box { transition: all 0.3s; border: 1px solid #e5e7eb; border-top: 5px solid var(--color-accent-teal); }
+.hierarchy-box:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.compliance-feature { border-left: 5px solid var(--color-accent-gold); padding-left: .75rem; }
+.compliance-card { transition: all 0.3s; }
+.compliance-card:hover { transform: scale(1.02); }
+.teal-icon { stroke: var(--color-accent-teal); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Optional connector line for hierarchy (used once) */
+.hierarchy-connector { position: relative; }
+.hierarchy-connector::after {
+  content: ''; position: absolute; left: 50%; bottom: -1rem; width: 2px; height: 1rem;
+  background-color: var(--color-primary-navy); z-index: 0;
+}
+.hierarchy-level-1 { border-top-color: var(--color-primary-navy); }
+
