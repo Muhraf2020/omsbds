@@ -62,7 +62,161 @@
   <!-- ===== PAGE CONTENT (Sustainability and Financial Planning) ===== -->
   <main class="p-6 sm:p-10 lg:p-12">
     <h2 class="text-3xl sm:text-5xl font-extrabold text-om-navy text-center mb-6 border-b-4 border-om-navy/10 pb-4">Sustainability and Financial Planning</h2>
+
+    <!-- ============== SUSTAINABILITY & FINANCIAL PLANNING (NO PAGE TITLE) ============== -->
+    <section id="sustainability-infographic" class="p-4 md:p-12">
+      <style>
+        /* Scoped palette & base (consistent with other sections) */
+        #sustainability-infographic{
+          --navy:#003366; --teal:#006A6A; --gold:#C8A232; --green-success:#16A34A;
+          font-family:'Inter',sans-serif; background:#f8fafc;
+        }
+        #sustainability-infographic .themed-box{
+          border-radius:16px; box-shadow:0 10px 15px rgba(0,0,0,.1);
+        }
+        #sustainability-infographic .kpi-icon{
+          stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;
+          fill:none; width:28px; height:28px; min-width:28px;
+        }
+        #sustainability-infographic .plan-row{display:grid; grid-template-columns:1fr 2fr 3fr;}
+        @media (max-width:768px){
+          #sustainability-infographic .plan-row{grid-template-columns:1fr;}
+          #sustainability-infographic .plan-row > div:nth-child(2){padding-top:.5rem; padding-bottom:.5rem;}
+        }
+      </style>
     
+      <!-- Intro (title removed, paragraph kept) -->
+      <div class="text-center mb-12">
+        <p class="text-xl text-[var(--teal)] font-medium max-w-4xl mx-auto">
+          Ensuring the long-term viability of the Digital Transformation through structured investment, measured returns, and self-financing mechanisms until 2036 and beyond.
+        </p>
+      </div>
+    
+      <!-- Investment Overview Box -->
+      <div class="max-w-7xl mx-auto themed-box p-6 bg-white border-b-4 border-[var(--navy)] mb-12">
+        <h2 class="text-3xl font-bold text-[var(--navy)] mb-4 flex items-center">
+          <svg class="kpi-icon mr-3 text-[var(--navy)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          10-Year Investment Overview (2026–2036)
+        </h2>
+        <div class="flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 md:space-x-8">
+          <div class="text-center">
+            <p class="text-5xl font-extrabold text-[var(--teal)]">OMR 22.216 M</p>
+            <p class="text-sm text-gray-600 font-semibold mt-1">Total Estimated Investment</p>
+          </div>
+          <div class="flex-1 w-full md:w-auto">
+            <div class="space-y-2">
+              <div class="flex items-center">
+                <span class="text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full bg-blue-100 text-[var(--navy)]">PHASE 1 (2026–2028)</span>
+                <p class="text-sm text-gray-700">Foundation building, platform acquisition (MASAR), initial cloud/integration.</p>
+              </div>
+              <div class="flex items-center">
+                <span class="text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full bg-yellow-100 text-[var(--gold)]">PHASE 2 (2029–2032)</span>
+                <p class="text-sm text-gray-700">Scaling operations, advanced tech implementation (AI, Analytics, Blockchain).</p>
+              </div>
+              <div class="flex items-center">
+                <span class="text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full bg-green-100 text-[var(--green-success)]">PHASE 3 (2033–2036)</span>
+                <p class="text-sm text-gray-700">Tapering core spend, continuous innovation, system upgrades and pilots.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Core Sustainability Matrix -->
+      <div class="max-w-7xl mx-auto themed-box overflow-hidden bg-white border-t-8 border-[var(--teal)]">
+        <!-- Table Header -->
+        <div class="plan-row text-white font-bold text-lg bg-[var(--teal)]">
+          <div class="p-4 border-b-2 border-white/20 md:border-b-0">PILLAR</div>
+          <div class="p-4 border-b-2 border-white/20 md:border-l md:border-b-0">KEY OBJECTIVE/TARGET</div>
+          <div class="p-4 md:border-l">SUSTAINABILITY STRATEGY</div>
+        </div>
+    
+        <!-- Plan Rows -->
+        <div class="divide-y divide-gray-200 text-[var(--navy)]">
+          <!-- 1. Cost-Benefit and ROI -->
+          <div class="plan-row items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors">
+            <div class="font-bold flex items-center text-lg text-[var(--navy)]">
+              <svg class="kpi-icon mr-2 text-[var(--navy)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1v22m5-5H7m10-4H7m10-4H7m10-4H7"/></svg>
+              Investment Justification
+            </div>
+            <div class="text-sm border-t md:border-t-0 md:border-l border-gray-200 p-2 md:p-0">
+              Track and quantify financial and non-financial returns to secure continued funding.
+            </div>
+            <div class="text-sm border-t md:border-t-0 md:border-l border-gray-200 p-2 md:p-0">
+              <ul class="list-disc list-inside space-y-1 ml-2">
+                <li>Quantify <strong>Tangible Savings</strong> (paper, OpEx, avoided CapEx).</li>
+                <li>Measure <strong>Intangible Benefits</strong> (faster service, improved decision quality).</li>
+                <li>Translate efficiency gains (e.g., automated processing) into <strong>Avoided Costs</strong> (staff growth).</li>
+              </ul>
+            </div>
+          </div>
+    
+          <!-- 2. Operational Cost Management -->
+          <div class="plan-row items-center p-4 hover:bg-gray-50 transition-colors">
+            <div class="font-bold flex items-center text-lg text-[var(--gold)]">
+              <svg class="kpi-icon mr-2 text-[var(--gold)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M3 15h18"/><path d="M7 11v2"/></svg>
+              Operational Efficiency
+            </div>
+            <div class="text-sm border-t md:border-t-0 md:border-l border-gray-200 p-2 md:p-0">
+              Target <strong>cost-per-user efficiency gains of ≥ 20% by 2036</strong>.
+            </div>
+            <div class="text-sm border-t md:border-t-0 md:border-l border-gray-200 p-2 md:p-0">
+              <ul class="list-disc list-inside space-y-1 ml-2">
+                <li>Aggressively <strong>optimize cloud</strong> usage (auto-scaling, reserved instances).</li>
+                <li><strong>Decommission legacy systems</strong> and eliminate associated maintenance costs.</li>
+                <li>Centralize ICT procurement and utilize <strong>shared government services</strong> (GovCloud, ePayment).</li>
+              </ul>
+            </div>
+          </div>
+    
+          <!-- 3. Self-Financing and Revenue -->
+          <div class="plan-row items-center p-4 bg-gray-50 hover:bg-gray-100 transition-colors">
+            <div class="font-bold flex items-center text-lg text-[var(--green-success)]">
+              <svg class="kpi-icon mr-2 text-[var(--green-success)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.75l-6.172 3.245 1.179-6.873-5-4.869 6.908-1.004 3.085-6.237 3.085 6.237 6.908 1.004-5 4.869 1.179 6.873z"/></svg>
+              Revenue Generation
+            </div>
+            <div class="text-sm border-t md:border-t-0 md:border-l border-gray-200 p-2 md:p-0">
+              MASAR/flagship platform should be <strong>self-financing or revenue-generating by 2036</strong>.
+            </div>
+            <div class="text-sm border-t md:border-t-0 md:border-l border-gray-200 p-2 md:p-0">
+              <ul class="list-disc list-inside space-y-1 ml-2">
+                <li>Offer <strong>MASAR as a Service</strong> (white-labeled) to other regional/national entities for a fee.</li>
+                <li>Pursue <strong>joint ventures</strong> or cost-sharing agreements for system development.</li>
+                <li>Charge modest fees for international credential <strong>verification services</strong>.</li>
+              </ul>
+            </div>
+          </div>
+    
+          <!-- 4. Long-Term System Sustainability -->
+          <div class="plan-row items-center p-4 hover:bg-gray-50 transition-colors">
+            <div class="font-bold flex items-center text-lg text-[var(--teal)]">
+              <svg class="kpi-icon mr-2 text-[var(--teal)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 16v-4m0-4V8"/></svg>
+              Tech &amp; Process Health
+            </div>
+            <div class="text-sm border-t md:border-t-0 md:border-l border-gray-200 p-2 md:p-0">
+              Ensure systems remain maintainable, scalable, and avoid technological obsolescence/lock-in.
+            </div>
+            <div class="text-sm border-t md:border-t-0 md:border-l border-gray-200 p-2 md:p-0">
+              <ul class="list-disc list-inside space-y-1 ml-2">
+                <li>Adopt <strong>modular architecture</strong> and adhere to <strong>open standards</strong> to ease component replacement.</li>
+                <li>Continuous <strong>IT staff training</strong> (Digital Academy concept) for internal maintenance capacity.</li>
+                <li>Maintain a <strong>rolling 3-year budget plan</strong> aligned with government 5-year plans for foresight.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Conclusion/Summary -->
+      <div class="mt-12 text-center max-w-4xl mx-auto themed-box p-6 bg-[var(--navy)] text-white">
+        <p class="text-lg font-medium"><strong>Conclusion: Enabling Lasting Value</strong></p>
+        <p class="text-sm opacity-90 mt-2">
+          The strategy ensures the transformation is a <strong>permanent evolution</strong>, not a temporary project. By securing multi-year funding, demonstrating clear ROI, and building alternative revenue streams (MASAR commercialization), OMSB reduces reliance on sole government funding and achieves long-term financial and operational excellence, aligning with <strong>Oman Vision 2040</strong> sustainability goals.
+        </p>
+      </div>
+    </section>
+    <!-- ================= /SUSTAINABILITY & FINANCIAL PLANNING ================= -->
+
     <!-- Introduction Section -->
     <section class="mb-12 p-6 bg-om-teal/5 rounded-xl shadow-inner border-l-4 border-om-teal">
       <p class="text-lg leading-relaxed text-gray-700">
