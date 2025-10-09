@@ -1,0 +1,62 @@
+backend:
+  # Netlify + Identity (easiest):
+  # name: git-gateway
+  # branch: main
+  # Otherwise (GitHub / other hosting):
+  name: github
+  repo: your-github-username/your-repo
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "content/site.json"
+        label: "Global Site Copy"
+        name: "site"
+        fields:
+          - {label: "Site Title", name: "siteTitle", widget: "string"}
+          - {label: "Site Subtitle", name: "siteSubtitle", widget: "string"}
+          - {label: "HTML Title Suffix", name: "htmlTitleSuffix", widget: "string", required: false}
+          - {label: "Footer Note", name: "footerNote", widget: "string"}
+
+  - name: "navigation"
+    label: "Navigation"
+    files:
+      - file: "content/nav.json"
+        label: "Nav Items"
+        name: "nav"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Label", name: "label", widget: "string"}
+              - {label: "Href",  name: "href",  widget: "string"}
+
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "HTML Title (tab title)", name: "htmlTitle", widget: "string", required: false}
+      - {label: "Page Title (H1/H2)", name: "pageTitle", widget: "string"}
+      - {label: "Intro Paragraph", name: "intro", widget: "text", required: false}
+      # Add more fields whenever you move more copy into CMS
+      # e.g. {label:"CTA Title", name:"ctaTitle", widget:"string"}
+
+  - name: "markdown"
+    label: "Markdown Sections"
+    folder: "content/markdown"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - {label: "Body", name: "body", widget: "markdown"}
