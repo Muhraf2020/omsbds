@@ -18,10 +18,10 @@ collections:
         label: "Global Site Copy"
         name: "site"
         fields:
-          - {label: "Site Title", name: "siteTitle", widget: "string"}
-          - {label: "Site Subtitle", name: "siteSubtitle", widget: "string"}
-          - {label: "HTML Title Suffix", name: "htmlTitleSuffix", widget: "string", required: false}
-          - {label: "Footer Note", name: "footerNote", widget: "string"}
+          - { label: "Site Title", name: "siteTitle", widget: "string" }
+          - { label: "Site Subtitle", name: "siteSubtitle", widget: "string" }
+          - { label: "HTML Title Suffix", name: "htmlTitleSuffix", widget: "string", required: false }
+          - { label: "Footer Note", name: "footerNote", widget: "string" }
 
   - name: "navigation"
     label: "Navigation"
@@ -34,8 +34,8 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - {label: "Label", name: "label", widget: "string"}
-              - {label: "Href",  name: "href",  widget: "string"}
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Href",  name: "href",  widget: "string" }
 
   - name: "pages"
     label: "Pages"
@@ -45,11 +45,10 @@ collections:
     extension: "json"
     format: "json"
     fields:
-      - {label: "HTML Title (tab title)", name: "htmlTitle", widget: "string", required: false}
-      - {label: "Page Title (H1/H2)", name: "pageTitle", widget: "string"}
-      - {label: "Intro Paragraph", name: "intro", widget: "text", required: false}
-      # Add more fields whenever you move more copy into CMS
-      # e.g. {label:"CTA Title", name:"ctaTitle", widget:"string"}
+      - { label: "HTML Title (tab title)", name: "htmlTitle", widget: "string", required: false }
+      - { label: "Page Title (H1/H2)", name: "pageTitle", widget: "string", required: false }
+      - { label: "Intro Paragraph", name: "intro", widget: "text", required: false }
+      - { label: "Body (Markdown)", name: "body", widget: "markdown" }
 
   - name: "markdown"
     label: "Markdown Sections"
@@ -59,4 +58,4 @@ collections:
     extension: "md"
     format: "frontmatter"
     fields:
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Body", name: "body", widget: "markdown" }
