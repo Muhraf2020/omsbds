@@ -131,13 +131,193 @@
 
     </section>
 
-    <!-- Summary Section -->
-    <section class="mt-12 py-8 bg-om-gold/10 rounded-xl shadow-md border-l-4 border-om-gold">
-      <h4 class="text-xl font-bold text-om-navy px-6 mb-3">Target State Summary</h4>
-      <p class="text-lg text-gray-700 leading-relaxed px-6">
-        In summary, the target technology architecture for OMSB is a **modular, API-driven, cloud-based ecosystem with a strong data backbone and integrated security**. It transforms OMSB’s IT from a collection of siloed applications into a coherent platform that can adapt and grow. This architecture will directly support the strategic goals - enabling **interoperability** (through APIs and integration), supporting **advanced analytics** (through the data lake/warehouse and AI infrastructure), improving **reliability and scalability** (through cloud and microservices), and safeguarding everything with modern security and identity management. By adopting this architecture, OMSB not only addresses its current technical limitations but also sets itself up to leverage technology innovations throughout the 2026–2036 period and beyond.
-      </p>
-    </section>
+    <!-- Architectural Overview (Diagram Simulation) -->
+        <section class="container-card">
+            <h2 class="section-heading pl-4 text-2xl font-bold mb-6">Target State Architecture Overview</h2>
+
+            <div class="space-y-6">
+
+                <!-- 1. Frontend/Users -->
+                <div class="p-4 bg-gray-50 rounded-lg border-b-4 border-sky-500">
+                    <p class="text-lg font-semibold text-gray-800">Presentation Layer: Unified Access</p>
+                    <p class="text-sm text-gray-600">Mobile, Web Portal, Chatbots, AR/VR Simulators (Edge Nodes)</p>
+                </div>
+
+                <!-- 2. Integration Layer -->
+                <div class="relative">
+                    <div class="flow-line w-11/12 mx-auto"></div>
+                    <div class="flex justify-center -mt-3">
+                        <span class="bg-gray-700 text-white text-xs font-bold py-1 px-3 rounded-full shadow-md">API-FIRST INTEGRATION</span>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-4 mt-3">
+                        <div class="text-center p-3 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700">API Gateway (REST/GraphQL)</div>
+                        <div class="text-center p-3 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700">Event Streaming (Kafka)</div>
+                        <div class="text-center p-3 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700">National Integration Platform (NIP)</div>
+                    </div>
+                </div>
+
+                <!-- 3. Core Applications (Microservices) -->
+                <div class="p-4 bg-yellow-50 rounded-lg border-b-4 border-yellow-600">
+                    <p class="text-lg font-semibold text-gray-800 mb-2">Core Services Layer: Modular Microservices</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge bg-white text-yellow-800 border border-yellow-300">Residency & Training</span>
+                        <span class="tech-badge bg-white text-yellow-800 border border-yellow-300">Exam Engine</span>
+                        <span class="tech-badge bg-white text-yellow-800 border border-yellow-300">CPD Tracking</span>
+                        <span class="tech-badge bg-white text-yellow-800 border border-yellow-300">Accreditation</span>
+                        <span class="tech-badge bg-white text-yellow-800 border border-yellow-300">Credentialing & Blockchain Ledger</span>
+                    </div>
+                </div>
+
+                <!-- 4. Data and Security Infrastructure (Base) -->
+                <div class="grid md:grid-cols-2 gap-6 pt-4 border-t border-gray-200">
+                    <div class="p-4 bg-green-50 rounded-lg border-b-4 border-green-600">
+                        <p class="text-lg font-semibold text-gray-800 mb-2">Data & Analytics Backbone</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-badge bg-white text-green-800 border border-green-300">Data Lake</span>
+                            <span class="tech-badge bg-white text-green-800 border border-green-300">Data Warehouse (BI Ready)</span>
+                            <span class="tech-badge bg-white text-green-800 border border-green-300">Master Professional Index (MPI)</span>
+                            <span class="tech-badge bg-white text-green-800 border border-green-300">AI/ML Sandbox</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-red-50 rounded-lg border-b-4 border-red-600">
+                        <p class="text-lg font-semibold text-gray-800 mb-2">Security & Identity Layer</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-badge bg-white text-red-800 border border-red-300">IAM/SSO (TAM)</span>
+                            <span class="tech-badge bg-white text-red-800 border border-red-300">MFA Enforced</span>
+                            <span class="tech-badge bg-white text-red-800 border border-red-300">Zero Trust Model (P2)</span>
+                            <span class="tech-badge bg-white text-red-800 border border-red-300">SIEM Integrated</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Foundation (Cloud) -->
+                <div class="p-4 bg-indigo-50 rounded-lg border-t-4 border-indigo-600">
+                    <p class="text-lg font-semibold text-gray-800">Cloud Foundation (Underlying)</p>
+                    <p class="text-sm text-gray-600">Oman Government Cloud, Multi-Cloud Deployment (Active/Active), Kubernetes Orchestration, IaC (Terraform)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Architectural Shifts (Table/Comparison) -->
+        <section class="container-card">
+            <h2 class="section-heading pl-4 text-2xl font-bold mb-6">Key Architectural Shifts & Benefits</h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Shift 1: Infrastructure -->
+                <div class="p-5 bg-gray-50 rounded-lg border-t-4 border-indigo-500">
+                    <p class="text-xl font-bold text-indigo-700 mb-2">Infrastructure Model</p>
+                    <table class="w-full text-sm text-gray-600">
+                        <tr>
+                            <td class="py-1 font-semibold text-gray-800">Current State:</td>
+                            <td class="py-1">On-Premises / Hybrid</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 font-semibold text-gray-800">Target State:</td>
+                            <td class="py-1">Cloud-Native, Multi-Cloud (P2)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 font-semibold text-gray-800">Key Benefit:</td>
+                            <td class="py-1 text-indigo-700 font-semibold">Scalability & Resilience</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Shift 2: Application Design -->
+                <div class="p-5 bg-gray-50 rounded-lg border-t-4 border-yellow-500">
+                    <p class="text-xl font-bold text-yellow-700 mb-2">Application Design</p>
+                    <table class="w-full text-sm text-gray-600">
+                        <tr>
+                            <td class="py-1 font-semibold text-gray-800">Current State:</td>
+                            <td class="py-1">Monolithic, Siloed Systems</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 font-semibold text-gray-800">Target State:</td>
+                            <td class="py-1">Modular Microservices (Containerized)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 font-semibold text-gray-800">Key Benefit:</td>
+                            <td class="py-1 text-yellow-700 font-semibold">Agility & Independent Deployment</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Shift 3: Integration Paradigm -->
+                <div class="p-5 bg-gray-50 rounded-lg border-t-4 border-[--color-accent]">
+                    <p class="text-xl font-bold text-[--color-primary] mb-2">Integration Paradigm</p>
+                    <table class="w-full text-sm text-gray-600">
+                        <tr>
+                            <td class="py-1 font-semibold text-gray-800">Current State:</td>
+                            <td class="py-1">Point-to-Point / Manual Sync</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 font-semibold text-gray-800">Target State:</td>
+                            <td class="py-1">API-Led & Event-Driven (Kafka)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1 font-semibold text-gray-800">Key Benefit:</td>
+                            <td class="py-1 text-[--color-primary] font-semibold">Interoperability & Real-Time Data Flow</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phased Security and Innovation Timeline -->
+        <section class="container-card">
+            <h2 class="section-heading pl-4 text-2xl font-bold mb-6">Security & Innovation Rollout (Phased)</h2>
+
+            <!-- Timeline Diagram -->
+            <div class="space-y-8">
+                
+                <!-- Phase 1: Identity & Foundation (2026-2028) -->
+                <div class="relative pl-6 sm:pl-10">
+                    <div class="absolute left-0 top-0 h-full w-2 bg-[--color-accent] rounded-full"></div>
+                    <div class="absolute left-0 w-6 h-6 bg-[--color-primary] rounded-full -ml-2 top-0 flex items-center justify-center text-xs font-bold text-white">P1</div>
+                    <div class="phase-block bg-[--color-accent] text-white inline-block mb-3">Foundation (2026–2028)</div>
+                    <ul class="text-sm list-disc list-inside space-y-2">
+                        <li>**Core IAM/SSO** implemented (leveraging National ID/TAM).</li>
+                        <li>**MFA** enforced for all users.</li>
+                        <li>**SIEM** system deployed for log aggregation.</li>
+                        <li>**Blockchain Credential Ledger** pilot initiated (Hyperledger).</li>
+                        <li>AI: Launch **At-Risk Trainee Predictor** and basic chatbots.</li>
+                    </ul>
+                </div>
+                
+                <!-- Separator -->
+                <div class="h-8 border-l-2 border-dashed border-gray-300 ml-4 sm:ml-8"></div>
+
+                <!-- Phase 2: Optimization & Zero Trust (2029-2032) -->
+                <div class="relative pl-6 sm:pl-10">
+                    <div class="absolute left-0 top-0 h-full w-2 bg-[--color-accent] rounded-full"></div>
+                    <div class="absolute left-0 w-6 h-6 bg-[--color-primary] rounded-full -ml-2 top-0 flex items-center justify-center text-xs font-bold text-white">P2</div>
+                    <div class="phase-block bg-[--color-primary] text-white inline-block mb-3">Optimization (2029–2032)</div>
+                    <ul class="text-sm list-disc list-inside space-y-2">
+                        <li>Shift to **Zero Trust Model** (Micro-segmentation, JIT Access).</li>
+                        <li>Scale **Blockchain** for all certifications (Smart Contracts).</li>
+                        <li>Advanced AI: Adaptive learning systems, AI-assisted grading.</li>
+                        <li>Infrastructure: Implement **Multi-Cloud Disaster Recovery** (Active/Active).</li>
+                        <li>Data: Real-time ingestion pipelines established.</li>
+                    </ul>
+                </div>
+
+                <!-- Separator -->
+                <div class="h-8 border-l-2 border-dashed border-gray-300 ml-4 sm:ml-8"></div>
+                
+                <!-- Phase 3: Continuous Innovation & Prescriptive (2033-2036) -->
+                <div class="relative pl-6 sm:pl-10">
+                    <div class="absolute left-0 w-6 h-6 bg-gray-600 rounded-full -ml-2 top-0 flex items-center justify-center text-xs font-bold text-white">P3</div>
+                    <div class="phase-block bg-gray-600 text-white inline-block mb-3">Innovation (2033–2036)</div>
+                    <ul class="text-sm list-disc list-inside space-y-2">
+                        <li>Security: Explore **AI-driven anomaly detection** (UBA).</li>
+                        <li>Data: Enable **Federated Learning** for research collaboration.</li>
+                        <li>Innovation: Implement **Autonomous Workflows** (AI auto-approvals with oversight).</li>
+                        <li>Policy: Privacy-by-Design fully integrated (data pseudonymization).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    
   </main>
   <!-- ===== GLOBAL FOOTER (do not remove) ===== -->
   <footer class="p-6 text-center text-sm text-gray-500 border-t border-gray-200 bg-gray-50">
