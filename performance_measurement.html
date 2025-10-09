@@ -161,6 +161,200 @@
 
     </section>
 
+    <!-- =================== PERFORMANCE SCORECARD (READY FOR MAIN CONTENT) =================== -->
+    <section id="kpi-infographic" class="p-4 md:p-12">
+      <style>
+        /* Scoped palette & base */
+        #kpi-infographic {
+          --navy:#003366; --teal:#006A6A; --gold:#C8A232; --slate:#94A3B8;
+          font-family:'Inter',sans-serif; background:#f8fafc;
+        }
+        #kpi-infographic .kpi-cell{
+          padding:1.25rem;border-bottom:1px solid #e2e8f0;display:flex;flex-direction:column;justify-content:center
+        }
+        #kpi-infographic .kpi-grid-header{
+          background:var(--navy);color:#fff;padding:.75rem 1.25rem;font-weight:700
+        }
+        #kpi-infographic .kpi-icon{
+          stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;width:24px;height:24px;min-width:24px
+        }
+      </style>
+    
+      <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[var(--navy)] mb-3">
+          Digital Transformation Performance Scorecard
+        </h1>
+        <p class="text-xl text-[var(--teal)] font-medium">
+          Aligning OMSB Strategy to National Digital Excellence Criteria (3 Pillars)
+        </p>
+      </header>
+    
+      <!-- Framework Summary: The 3 Pillars -->
+      <div class="max-w-6xl mx-auto mb-16">
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <!-- Pillar 1 -->
+          <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[var(--teal)]">
+            <p class="text-4xl font-black text-[var(--teal)] mb-2">30%</p>
+            <h3 class="text-2xl font-bold text-[var(--navy)]">Digital Services Maturity</h3>
+            <p class="text-sm text-gray-600 mt-2">External service quality, accessibility &amp; experience.</p>
+          </div>
+          <!-- Pillar 2 -->
+          <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[var(--navy)]">
+            <p class="text-4xl font-black text-[var(--navy)] mb-2">40%</p>
+            <h3 class="text-2xl font-bold text-[var(--navy)]">Institutional Readiness</h3>
+            <p class="text-sm text-gray-600 mt-2">Internal capacity, governance, and infrastructure.</p>
+          </div>
+          <!-- Pillar 3 -->
+          <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-[var(--gold)]">
+            <p class="text-4xl font-black text-[var(--gold)] mb-2">30%</p>
+            <h3 class="text-2xl font-bold text-[var(--navy)]">Actual Impact &amp; Outcomes</h3>
+            <p class="text-sm text-gray-600 mt-2">Tangible results: cost savings, quality improvements.</p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- KPI Detail Sections -->
+      <div class="max-w-6xl mx-auto space-y-12">
+    
+        <!-- 1. Digital Services Maturity (30%) -->
+        <section class="rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+          <h2 class="bg-[var(--teal)] text-white text-2xl font-bold p-4 md:p-6 flex items-center">
+            <svg class="kpi-icon mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            1. Digital Services Maturity KPIs (30% Weight)
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr_1fr] text-[var(--navy)] bg-white">
+            <div class="kpi-grid-header hidden md:block border-r border-gray-300">Metric</div>
+            <div class="kpi-grid-header hidden md:block border-r border-gray-300">Description / Goal</div>
+            <div class="kpi-grid-header hidden md:block">Key Target / Timeline</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Service Automation</div>
+            <div class="kpi-cell md:border-r">Percentage of services fully online with end-to-end automation.</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--teal)]">100% by 2031 (50% by 2028)</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Process Simplification</div>
+            <div class="kpi-cell md:border-r">Percentage of services re-engineered and simplified.</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--teal)]">100% by 2031 (30% by 2026)</div>
+    
+            <div class="kpi-cell font-bold md:border-r">User Satisfaction</div>
+            <div class="kpi-cell md:border-r">Measured via surveys (post-service, annual resident/fellow survey).</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--teal)]"><span class="text-lg">≥90%</span> by 2031</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Service Usage Rate</div>
+            <div class="kpi-cell md:border-r">Proportion of total transactions done through digital channels vs. traditional means.</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--teal)]"><span class="text-lg">~90%</span> online usage by 2031</div>
+          </div>
+        </section>
+    
+        <!-- 2. Institutional Readiness (40%) -->
+        <section class="rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+          <h2 class="bg-[var(--navy)] text-white text-2xl font-bold p-4 md:p-6 flex items-center">
+            <svg class="kpi-icon mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 17s.6 1.4 2 1.4c1.2 0 2.3-.9 2.3-2.3 0-.7-.4-1.4-1.2-1.4s-1.4.6-1.4 1.4c0 .3.2.6.5.9.1.1.2.2.3.3l1.8 1.8"/><path d="M12 17s.6 1.4 2 1.4c1.2 0 2.3-.9 2.3-2.3 0-.7-.4-1.4-1.2-1.4s-1.4.6-1.4 1.4c0 .3.2.6.5.9.1.1.2.2.3.3l1.8 1.8"/><path d="M20 17s.6 1.4 2 1.4c1.2 0 2.3-.9 2.3-2.3 0-.7-.4-1.4-1.2-1.4s-1.4.6-1.4 1.4c0 .3.2.6.5.9.1.1.2.2.3.3l1.8 1.8"/><path d="M7 17l1.8 1.8"/></svg>
+            2. Institutional Readiness KPIs (40% Weight)
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr_1fr] text-[var(--navy)] bg-white">
+            <div class="kpi-grid-header hidden md:block border-r border-gray-300 bg-gray-700">Metric</div>
+            <div class="kpi-grid-header hidden md:block border-r border-gray-300 bg-gray-700">Description / Goal</div>
+            <div class="kpi-grid-header hidden md:block bg-gray-700">Key Target / Timeline</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Strategy Progress</div>
+            <div class="kpi-cell md:border-r">Percentage of planned initiatives delivered on-time and within scope.</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--navy)]"><span class="text-lg">&gt;90%</span> on-time delivery (annual)</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Compliance &amp; Governance</div>
+            <div class="kpi-cell md:border-r">Compliance with ICT controls/policies &amp; IT Governance Maturity assessment.</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--navy)]">100% compliance by 2027</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Workforce Digital Capacity</div>
+            <div class="kpi-cell md:border-r">Percentage of staff completing advanced digital training (for relevant roles).</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--navy)]">50% by 2031 (100% by 2036)</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Project Delivery Performance</div>
+            <div class="kpi-cell md:border-r">Percent of digital projects delivered on-time and on-budget.</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--navy)]"><span class="text-lg">&gt;95%</span> adherence (latter half)</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Integration with Shared Platforms</div>
+            <div class="kpi-cell md:border-r">Number of national platform integrations achieved.</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--navy)]">All relevant ones by 2027</div>
+          </div>
+        </section>
+    
+        <!-- 3. Actual Impact & Outcomes (30%) -->
+        <section class="rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+          <h2 class="bg-[var(--gold)] text-black text-2xl font-bold p-4 md:p-6 flex items-center">
+            <svg class="kpi-icon mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.75 3h-.5L11 8h2l-2 5h2l-2 5h.5l2.25 5h.5L18 19h-2l2-5h-2l2-5h-2l2-5h-.5l-2.25-5z"/></svg>
+            3. Actual Impact &amp; Outcomes KPIs (30% Weight)
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr_1fr] text-[var(--navy)] bg-white">
+            <div class="kpi-grid-header hidden md:block border-r border-gray-300 bg-yellow-700">Metric</div>
+            <div class="kpi-grid-header hidden md:block border-r border-gray-300 bg-yellow-700">Description / Goal</div>
+            <div class="kpi-grid-header hidden md:block bg-yellow-700">Key Target / Timeline</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Cost Savings/Avoidance</div>
+            <div class="kpi-cell md:border-r">Financial impact of digital initiatives (e.g., cloud migration, reduced paperwork).</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--gold)]">Significant cumulative savings by 2031</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Outcome Improvements</div>
+            <div class="kpi-cell md:border-r">Linking digital efforts to core mission outcomes (e.g., faster residency slot filling, better exam pass rates).</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--gold)]">Demonstrable improvement in core metrics</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Integration Benefits Realization</div>
+            <div class="kpi-cell md:border-r">Monitor data exchange volume or reduction in manual verifications due to integration.</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--gold)]">Qualitative evidence of yielding value</div>
+    
+            <div class="kpi-cell font-bold md:border-r">Data Sharing Readiness</div>
+            <div class="kpi-cell md:border-r">Average time to fulfill data requests from other agencies (within privacy limits).</div>
+            <div class="kpi-cell bg-gray-50 font-semibold text-[var(--gold)]">Aim for quick &amp; broad data usability</div>
+          </div>
+        </section>
+    
+        <!-- Monitoring & Governance Summary -->
+        <section class="mt-16 pt-8 border-t-4 border-[var(--slate)] max-w-4xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-[var(--navy)] text-center mb-6">Monitoring &amp; Governance</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Scorecard & Monitoring -->
+            <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+              <h3 class="text-xl font-bold text-[var(--teal)] mb-3">Scorecard &amp; Review Cadence</h3>
+              <ul class="space-y-3 text-sm text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-[var(--navy)] mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 11h4"/><path d="M7 15h4"/><path d="m17 7-5 5"/></svg>
+                  <div><strong class="text-[var(--navy)]">Digital Transformation Scorecard:</strong> Reviewed <span class="font-semibold">Quarterly</span> by the Steering Committee and <span class="font-semibold">Annually</span> by top leadership.</div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-[var(--navy)] mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2h6v6"/><path d="M4 22 20 6"/><path d="M10 20.25a7.5 7.5 0 1 0-7.5-7.5 7.5 7.5 0 0 0 7.5 7.5z"/></svg>
+                  <div><strong class="text-[var(--navy)]">Central KPI Dashboard:</strong> Implementation planned by <span class="font-semibold">2027</span> to pull <span class="font-semibold">near-real-time</span> data automatically.</div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-[var(--navy)] mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v6h6"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><line x1="10" y1="13" x2="14" y2="13"/><line x1="10" y1="17" x2="14" y2="17"/><line x1="10" y1="9" x2="10" y2="9"/></svg>
+                  <div><strong class="text-[var(--navy)]">Annual Report:</strong> Summarized progress report produced <span class="font-semibold">Annually starting 2026</span> for the Board and national program office.</div>
+                </li>
+              </ul>
+            </div>
+    
+            <!-- Feedback and Adaptation -->
+            <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+              <h3 class="text-xl font-bold text-[var(--teal)] mb-3">Feedback &amp; Adaptation Mechanisms</h3>
+              <ul class="space-y-3 text-sm text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-[var(--navy)] mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <div><strong class="text-[var(--navy)]">Continuous Feedback Loops:</strong> Post-service surveys, annual stakeholder surveys, and dedicated user councils/focus groups.</div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-[var(--navy)] mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3.5-3.5a2 2 0 0 0 0-2.83 2 2 0 0 0-2.83 0l-3.5 3.5a3 3 0 0 0-4.24 0c.32.32.42.76.28 1.14"/><path d="M15 11a5 5 0 0 0-7.54-.54l-3.5 3.5a2 2 0 0 0 0 2.83 2 2 0 0 0 2.83 0l3.5-3.5a3 3 0 0 0 4.24 0"/></svg>
+                  <div><strong class="text-[var(--navy)]">Benefits Realization Tracking:</strong> Expected benefits are defined at project start, and measured at close-out to confirm value delivery.</div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-[var(--navy)] mr-3 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="m18 16 6-6-6-6"/><path d="m6 8-6 6 6 6"/></svg>
+                  <div><strong class="text-[var(--navy)]">Complaint Analysis:</strong> Reduction in complaints is a success metric; recurring complaints trigger root cause analysis for immediate fix.</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+    
+      </div>
+    </section>
+    <!-- =================== /PERFORMANCE SCORECARD =================== -->
+
     <!-- KPI Table Section -->
     <section class="mt-12">
       <h3 class="text-3xl font-bold text-om-navy mb-4 border-b border-om-navy/10 pb-2">Table: OMSB Digital Strategy – Performance Measures & KPIs</h3>
