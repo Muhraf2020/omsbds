@@ -53,8 +53,236 @@
   </nav>
 </header>
 
-  <!-- ===== PAGE CONTENT (you can safely edit inside this block) ===== -->
-  
+<!-- ===== PAGE CONTENT (you can safely edit inside this block) ===== -->
+
+<!-- ====== OMSB Additions (paste inside <main>) ====== -->
+<style>
+  /* Scoped so nothing global breaks */
+  .omsb-additions { --gap-s: 0.75rem; }
+  .omsb-additions .pillar-card {
+    transition: all .3s ease;
+    cursor: default;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.06);
+    border: 1px solid transparent;
+  }
+  .omsb-additions .pillar-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px -5px rgba(0,0,0,.15), 0 6px 10px -5px rgba(0,0,0,.1);
+    border-color: var(--color-accent-teal);
+  }
+
+  .omsb-additions .metric-box {
+    border: 1px solid #e5e7eb;
+    transition: all .3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: .75rem; /* match rounded-xl */
+  }
+  .omsb-additions .metric-box::after {
+    content: "";
+    position: absolute; inset: 0;
+    border-radius: .75rem;
+    border: 3px solid transparent;
+    pointer-events: none;
+    transition: border-color .3s ease, box-shadow .3s ease;
+    z-index: 10;
+  }
+  .omsb-additions .metric-box:hover {
+    background-color: #f0fdfa;
+    transform: scale(1.01);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
+  }
+  .omsb-additions .metric-box:hover::after {
+    border-color: var(--color-accent-teal);
+    box-shadow: 0 0 20px rgba(0,106,106,.3);
+  }
+  /* highlight the big number on hover (2nd block child) */
+  .omsb-additions .metric-box div:nth-child(2) {
+    transition: color .3s ease, text-shadow .3s ease;
+  }
+  .omsb-additions .metric-box:hover div:nth-child(2) {
+    color: var(--color-accent-gold) !important;
+    text-shadow: 0 0 5px rgba(200,162,50,.5);
+  }
+
+  /* Timeline (mobile vertical line) */
+  .omsb-additions .timeline-container { position: relative; }
+  @media (max-width: 767px) {
+    .omsb-additions .timeline-container { border-left: 2px solid #d1d5db; padding-left: 20px; }
+  }
+</style>
+
+<div class="omsb-additions">
+
+  <!-- Vision -->
+  <section class="mb-16 px-6 sm:px-10 py-8 rounded-xl shadow-2xl bg-gradient-to-r from-om-teal to-cyan-700">
+    <div class="lg:flex lg:items-center lg:justify-between">
+      <div class="lg:w-1/3">
+        <p class="text-sm font-semibold uppercase tracking-wider text-white/80">Strategic Vision</p>
+        <h2 class="text-4xl font-bold text-white mt-1">OMSB 2036: Seamless, Data-Driven Authority</h2>
+      </div>
+      <div class="lg:w-2/3 lg:pl-10 mt-6 lg:mt-0">
+        <blockquote class="border-l-4 border-white pl-4 text-white italic text-lg">
+          “By 2036, OMSB will be the leading <strong>digitally integrated authority</strong> for postgraduate medical training,
+          delivering seamless, data-driven, secure, and user-centric services that elevate educational quality and workforce readiness for Oman’s healthcare system.”
+        </blockquote>
+        <p class="text-sm text-white/90 mt-3">— Aligned with <strong>Oman Vision 2040</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Six Pillars -->
+  <section class="mb-16 px-6 sm:px-10 py-8">
+    <h2 class="text-3xl font-bold text-om-navy mb-8 text-center">Six Pillars of Transformation</h2>
+    <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">
+      These six foundational pillars structure the transformation, ensuring a comprehensive, systematic approach.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Pillar 1 -->
+      <div class="pillar-card p-6 bg-white rounded-xl">
+        <div class="h-12 w-12 bg-blue-100 text-om-navy rounded-full flex items-center justify-center mb-4">
+          <!-- lightning -->
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold text-om-teal mb-2">Modernize & Automate Core Processes</h3>
+        <p class="text-gray-600 text-sm">End-to-end digitization of OMSB services, from residency application to certification.</p>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="pillar-card p-6 bg-white rounded-xl">
+        <div class="h-12 w-12 bg-green-100 text-om-teal rounded-full flex items-center justify-center mb-4">
+          <!-- bars -->
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor" aria-hidden="true"><path d="M3 21h18v-2H3v2Zm2-4h3V8H5v9Zm5 0h3V4h-3v13Zm5 0h3V12h-3v5Z"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold text-om-teal mb-2">Unify Data & Break Down Silos</h3>
+        <p class="text-gray-600 text-sm">Single source of truth via a cloud data lake and Master Professional Index.</p>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="pillar-card p-6 bg-white rounded-xl">
+        <div class="h-12 w-12 bg-om-gold/20 text-om-gold rounded-full flex items-center justify-center mb-4">
+          <!-- cpu -->
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor" aria-hidden="true"><path d="M9 3V1h2v2h2V1h2v2h2a2 2 0 0 1 2 2v2h2v2h-2v2h2v2h-2v2a2 2 0 0 1-2 2h-2v2h-2v-2h-2v2H9v-2H7a2 2 0 0 1-2-2v-2H3v-2h2v-2H3V7h2V5a2 2 0 0 1 2-2h2Zm-2 6v6h10V9H7Z"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold text-om-teal mb-2">Embed Analytics & AI</h3>
+        <p class="text-gray-600 text-sm">Real-time dashboards, predictive models, early-alert systems for trainees.</p>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div class="pillar-card p-6 bg-white rounded-xl">
+        <div class="h-12 w-12 bg-yellow-100 text-om-navy rounded-full flex items-center justify-center mb-4">
+          <!-- user -->
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5C21 16.5 17 14 12 14Z"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold text-om-teal mb-2">Deliver User-Centric Experiences</h3>
+        <p class="text-gray-600 text-sm">Mobile-first, multi-channel services with a unified portal and SSO.</p>
+      </div>
+
+      <!-- Pillar 5 -->
+      <div class="pillar-card p-6 bg-white rounded-xl">
+        <div class="h-12 w-12 bg-purple-100 text-om-teal rounded-full flex items-center justify-center mb-4">
+          <!-- shield check -->
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm-1 14-4-4 1.4-1.4L11 13.2l4.6-4.6L17 10l-6 6Z"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold text-om-teal mb-2">Strengthen Governance & Security</h3>
+        <p class="text-gray-600 text-sm">Cybersecurity frameworks, ISO 27001, full national policy compliance.</p>
+      </div>
+
+      <!-- Pillar 6 -->
+      <div class="pillar-card p-6 bg-white rounded-xl">
+        <div class="h-12 w-12 bg-teal-100 text-om-gold rounded-full flex items-center justify-center mb-4">
+          <!-- leaf -->
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor" aria-hidden="true"><path d="M5 21q0-3.6 2.55-6.05Q10.1 12.5 14 12.5h2.5V10q0-1.875-.562-3.313T14.9 4.5Q13.4 3 11 3 7.675 3 6.337 5.325 5 7.65 5 11v10Zm6.5 0q0-2.05.775-3.65.775-1.6 2.025-2.575Q15.55 13.8 17 13.4q1.45-.4 3-.4v2q-2.9 0-4.7 1.8-1.8 1.8-1.8 4.2h-2Z"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold text-om-teal mb-2">Empower Workforce & Foster Innovation</h3>
+        <p class="text-gray-600 text-sm">Change management, upskilling, and an “evergreen” IT environment.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Key Outcomes -->
+  <section class="mb-16 px-6 sm:px-10 py-8">
+    <h2 class="text-3xl font-bold text-om-navy mb-8 text-center">Key Outcomes by 2035: Measuring Success</h2>
+    <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">
+      Clear, measurable targets across critical areas ensure tangible returns on investment.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="metric-box p-6 bg-white rounded-xl flex flex-col justify-between">
+        <div class="text-2xl font-semibold text-gray-700">Process Excellence</div>
+        <div class="text-5xl font-extrabold text-om-navy my-3">60%</div>
+        <p class="text-sm text-gray-500">Reduction in certification & credentialing cycle times.</p>
+      </div>
+
+      <div class="metric-box p-6 bg-white rounded-xl flex flex-col justify-between">
+        <div class="text-2xl font-semibold text-gray-700">User Experience (UX)</div>
+        <div class="text-5xl font-extrabold text-om-teal my-3">≥90%</div>
+        <p class="text-sm text-gray-500">User satisfaction among trainees, faculty, and partners.</p>
+      </div>
+
+      <div class="metric-box p-6 bg-white rounded-xl flex flex-col justify-between">
+        <div class="text-2xl font-semibold text-gray-700">Data Interoperability</div>
+        <div class="text-5xl font-extrabold text-om-navy my-3">2-Way</div>
+        <p class="text-sm text-gray-500">Exchange with MoH’s Nabd Al Shifa EHR and international bodies.</p>
+      </div>
+
+      <div class="metric-box p-6 bg-white rounded-xl flex flex-col justify-between">
+        <div class="text-2xl font-semibold text-gray-700">Governance & Security</div>
+        <div class="text-5xl font-extrabold text-om-teal my-3">ISO 27001</div>
+        <p class="text-sm text-gray-500">Certification and 100% WCAG 2.1 AA accessibility.</p>
+      </div>
+
+      <div class="metric-box p-6 bg-white rounded-xl flex flex-col justify-between">
+        <div class="text-2xl font-semibold text-gray-700">Automation & Efficiency</div>
+        <div class="text-5xl font-extrabold text-om-navy my-3">Full</div>
+        <p class="text-sm text-gray-500">Automated CPD tracking; 95% on-time exam results.</p>
+      </div>
+
+      <div class="metric-box p-6 bg-white rounded-xl flex flex-col justify-between">
+        <div class="text-2xl font-semibold text-gray-700">Advanced Analytics</div>
+        <div class="text-5xl font-extrabold text-om-teal my-3">Predictive</div>
+        <p class="text-sm text-gray-500">Workforce modeling and AI-driven CPD recommendations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap & Investment -->
+  <section class="mb-16 px-6 sm:px-10 py-8">
+    <h2 class="text-3xl font-bold text-om-navy mb-8 text-center">10-Year Transformation Roadmap & Investment</h2>
+
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+      <div class="text-center mb-10">
+        <div class="text-3xl sm:text-4xl font-extrabold text-om-gold">OMR 22.2 Million</div>
+        <p class="text-lg text-gray-600 mt-1">Total Estimated Investment (2026–2036)</p>
+      </div>
+
+      <div class="timeline-container grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="timeline-item p-4 border rounded-xl">
+          <div class="mb-1 text-2xl font-bold text-om-navy">Phase I</div>
+          <div class="text-xl font-semibold text-om-teal">2026–2028</div>
+          <p class="text-gray-600 mt-2 text-sm">Core infrastructure, quick-win e-services (e.g., MASAR evolution), initial integrations.</p>
+        </div>
+        <div class="timeline-item p-4 border rounded-xl">
+          <div class="mb-1 text-2xl font-bold text-om-navy">Phase II</div>
+          <div class="text-xl font-semibold text-om-teal">2029–2032</div>
+          <p class="text-gray-600 mt-2 text-sm">Advanced analytics & AI, blockchain credentialing, full digitization & interoperability.</p>
+        </div>
+        <div class="timeline-item p-4 border rounded-xl">
+          <div class="mb-1 text-2xl font-bold text-om-navy">Phase III</div>
+          <div class="text-xl font-semibold text-om-teal">2033–2036</div>
+          <p class="text-gray-600 mt-2 text-sm">Continuous innovation, predictive planning, global interoperability, self-financing model.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- ====== /OMSB Additions ====== -->
+
+
 <section id="core-vision" class="mb-16">
         <h3 class="text-4xl font-extrabold text-om-navy text-center mb-12 border-b-4 border-om-navy/10 pb-4">Key Project Pillars</h3>
         <div class="grid lg:grid-cols-2 gap-10 lg:gap-12">
