@@ -161,3 +161,73 @@ main h2.text-om-navy {
 }
 .hierarchy-level-1 { border-top-color: var(--color-primary-navy); }
 
+
+/* --- OMSB Organogram (governance) --- */
+.org-chart-container {
+  display:flex; flex-direction:column; align-items:center;
+  max-width:1400px; margin:0 auto; padding:2rem 0;
+}
+.org-box {
+  background:#fff; padding:1rem; border-radius:8px;
+  box-shadow:0 4px 6px rgba(0,0,0,.1);
+  margin-bottom:2.5rem; position:relative; text-align:center;
+  transition:all .3s ease; max-width:300px; width:90%;
+  border-top:5px solid var(--color-primary-navy);
+}
+.org-box:hover { transform: translateY(-3px); box-shadow:0 10px 15px rgba(0,0,0,.15); }
+.tier-1 { border-top-color: var(--color-accent-gold); font-size:1.25rem; font-weight:700; }
+.tier-2 { border-top-color: var(--color-primary-navy); }
+
+/* connectors */
+.connect-down::before,
+.sc-to-pm::before,
+.pm-to-dt::before,
+.pm-to-dt-peer-line::before,
+.peer-group::before,
+.peer-group > .org-box::after { background-color: #94a3b8; } /* slate-400 */
+
+.connect-down::before {
+  content:''; position:absolute; bottom:-2.5rem; left:50%; transform:translateX(-50%);
+  width:2px; height:2.5rem; z-index:0;
+}
+
+.peer-group { display:flex; justify-content:center; position:relative; padding-top:1.5rem; }
+.peer-group::before { content:''; position:absolute; top:0; left:5%; right:5%; height:2px; z-index:1; }
+.peer-group > .org-box { margin: -1.5rem .5rem 2.5rem; }
+.peer-group > .org-box::after {
+  content:''; position:absolute; top:-1.5rem; left:50%; transform:translateX(-50%);
+  width:2px; height:1.5rem; z-index:2;
+}
+
+@media (max-width:1024px){
+  .peer-group { flex-wrap:wrap; width:100%; padding-top:0; }
+  .peer-group::before { display:none; }
+  .peer-group > .org-box { width:calc(50% - 1rem); margin:.5rem; margin-bottom:2.5rem; margin-top:0; }
+  .peer-group > .org-box::after { top:auto; bottom:-2.5rem; height:2.5rem; z-index:0; }
+  .peer-group:last-child > .org-box::after { display:none; }
+}
+@media (min-width:1024px){ .peer-group > .org-box { width:calc(33.333% - 1rem); } }
+
+.sc-to-pm::before {
+  content:''; position:absolute; bottom:-2.5rem; left:50%; transform:translateX(-50%);
+  width:2px; height:2.5rem; z-index:0;
+}
+
+.pm-to-dt { position:relative; }
+.pm-to-dt::before {
+  content:''; position:absolute; bottom:-1rem; left:50%; transform:translateX(-50%);
+  width:2px; height:1rem; z-index:0;
+}
+.pm-to-dt-peer-line::before {
+  content:''; position:absolute; top:-2px; left:50%; transform:translateX(-50%);
+  width:100%; height:2px; z-index:1;
+}
+
+@media (max-width:768px){
+  .peer-group-small { flex-direction:column; align-items:center; padding-top:0; }
+  .peer-group-small > .org-box { width:90%; margin:.5rem 0; }
+  .peer-group-small > .org-box::after,
+  .peer-group-small::before { display:none; }
+}
+
+
