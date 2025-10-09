@@ -58,40 +58,53 @@
 </header>
 
 
-  <!-- ===== PAGE CONTENT (you can safely edit inside this block) ===== -->
-  <!-- ===== Governance, Security & Compliance (drop-in) ===== -->
-<style>
-  .govsec {
-    --color-primary-navy:#003366;
-    --color-accent-teal:#006A6A;
-    --color-accent-gold:#C8A232;
-    --color-text:#1f2937;
-    font-family:'Inter',sans-serif;
-  }
-  .govsec .infographic-section-title{
-    color: var(--color-primary-navy);
-    border-bottom: 4px solid var(--color-accent-gold);
-    padding-bottom: .5rem;
-  }
-  .govsec .hierarchy-box{
-    transition: all .3s; border:1px solid #e5e7eb; border-top:5px solid var(--color-accent-teal);
-  }
-  .govsec .hierarchy-box:hover{ transform: translateY(-2px); box-shadow:0 4px 6px rgba(0,0,0,.1); }
-  .govsec .compliance-feature{ border-left:5px solid var(--color-accent-gold); }
-  .govsec .compliance-card{ transition: all .3s; }
-  .govsec .compliance-card:hover{ transform: scale(1.02); }
-  .govsec .teal-icon{ stroke: var(--color-accent-teal); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
-  .govsec .hierarchy-connector{ position:relative; }
-  .govsec .hierarchy-connector::after{
-    content:''; position:absolute; left:50%; bottom:-1rem; width:2px; height:1rem; background-color:var(--color-primary-navy); z-index:0;
-  }
-  .govsec .hierarchy-level-1{ border-top-color: var(--color-primary-navy); }
-</style>
+<!-- ===== PAGE CONTENT (you can safely edit inside this block) ===== -->
+<!-- Governance, Security & Compliance — DROP-IN MAIN CONTENT -->
+<div class="govsec-wrapper">
+  <style>
+    /* ===== Scoped styles (won’t leak outside .govsec-wrapper) ===== */
+    .govsec-wrapper {
+      --color-primary-navy:#003366;
+      --color-accent-teal:#006A6A;
+      --color-accent-gold:#C8A232;
+      --color-text:#1f2937;
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;
+      color: var(--color-text);
+    }
+    .govsec-wrapper .content-card { max-width: 1400px; }
 
-<div class="govsec">
-  <div class="max-w-[1400px] mx-auto">
+    .govsec-wrapper .infographic-section-title{
+      color: var(--color-primary-navy);
+      border-bottom: 4px solid var(--color-accent-gold);
+      padding-bottom: .5rem;
+    }
+    .govsec-wrapper .hierarchy-box{
+      transition: all .3s;
+      border:1px solid #e5e7eb;
+      border-top:5px solid var(--color-accent-teal);
+    }
+    .govsec-wrapper .hierarchy-box:hover{
+      transform: translateY(-2px);
+      box-shadow:0 4px 6px rgba(0,0,0,.1);
+    }
+    .govsec-wrapper .compliance-feature{ border-left:5px solid var(--color-accent-gold); }
+    .govsec-wrapper .compliance-card{ transition: all .3s; }
+    .govsec-wrapper .compliance-card:hover{ transform: scale(1.02); }
+    .govsec-wrapper .teal-icon{
+      stroke: var(--color-accent-teal);
+      fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;
+    }
+    .govsec-wrapper .hierarchy-connector{ position:relative; }
+    .govsec-wrapper .hierarchy-connector::after{
+      content:''; position:absolute; left:50%; bottom:-1rem; width:2px; height:1rem;
+      background-color:var(--color-primary-navy); z-index:0;
+    }
+    .govsec-wrapper .hierarchy-level-1{ border-top-color: var(--color-primary-navy); }
+  </style>
 
-    <!-- Section 1: Digital Governance Structure -->
+  <div class="content-card mx-auto">
+
+    <!-- ===== Section 1: Digital Governance Structure ===== -->
     <section class="mb-16">
       <h2 class="text-3xl font-bold mb-8 infographic-section-title">1. Digital Governance Structure</h2>
 
@@ -103,16 +116,22 @@
           </span>
           <h3 class="text-2xl font-semibold" style="color: var(--color-primary-navy);">Steering Committee (8–10 members)</h3>
         </div>
-        <p class="mb-4 text-sm font-medium">Chair:
-          <strong class="text-lg" style="color: var(--color-accent-gold);">Her Excellency, the Executive President of OMSB</strong>
+        <p class="mb-4 text-sm font-medium">
+          Chair: <strong class="text-lg" style="color: var(--color-accent-gold);">Her Excellency, the Executive President of OMSB</strong>
         </p>
         <p class="mb-4"><strong>Purpose:</strong> Set strategic direction, ratify priorities and policies, approve funding, and track KPIs and risk. Reports to the OMSB Board.</p>
         <div class="p-4 bg-gray-50 rounded-lg">
           <h4 class="text-base font-semibold mb-2" style="color: var(--color-accent-teal);">Indicative Membership:</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-gray-600">
-            <p>· Director of Education & Training</p><p>· Director of Examinations & Assessment</p><p>· Director of Accreditation & Quality</p>
-            <p>· Director of Information Technology</p><p>· Director of Finance & Administration</p><p>· Director of Human Resources & Org Dev</p>
-            <p>· Director of Legal/Compliance</p><p>· Director of Communications & PR</p><p>· (Ex-officio): CISO and CDO (as relevant)</p>
+            <p>· Director of Education & Training</p>
+            <p>· Director of Examinations & Assessment</p>
+            <p>· Director of Accreditation & Quality</p>
+            <p>· Director of Information Technology</p>
+            <p>· Director of Finance & Administration</p>
+            <p>· Director of Human Resources & Organizational Development</p>
+            <p>· Director of Legal/Compliance</p>
+            <p>· Director of Communications & Public Relations</p>
+            <p>· (Ex-officio): CISO and CDO (when relevant)</p>
           </div>
           <p class="mt-3 text-xs"><strong>Cadence:</strong> Monthly governance sessions, quarterly Board status, KPI dashboard, and risk register sign-off.</p>
         </div>
@@ -131,7 +150,7 @@
 
         <div class="hierarchy-box bg-white p-5 rounded-lg shadow-sm hierarchy-level-1 relative z-10 md:mt-6">
           <h4 class="text-xl font-semibold mb-2" style="color: var(--color-accent-teal);">Digital Transformation Team</h4>
-          <p class="text-sm">Core delivery team under the Program Manager: Program Manager (lead), Assistant Manager, Community Manager, and Initiatives & Projects Managers.</p>
+          <p class="text-sm">The core delivery team under the Program Manager: Program Manager (lead), Assistant Manager, Community Manager, and Initiatives & Projects Managers (each owning a defined initiative).</p>
           <hr class="my-2 border-gray-200">
           <h5 class="text-sm font-medium" style="color: var(--color-primary-navy);">Community Manager — Scope:</h5>
           <ul class="list-disc list-inside text-xs space-y-1">
@@ -157,7 +176,7 @@
         <div class="p-4 bg-white rounded-lg shadow-md border-t-4 border-l-2" style="border-color: var(--color-accent-gold);">
           <p class="font-bold text-base mb-1" style="color: var(--color-primary-navy);">IT Governance & Architecture Board</p>
           <p class="text-sm font-medium" style="color: var(--color-accent-teal);">Chair: Director of IT (with Enterprise Architect)</p>
-          <p class="text-xs text-gray-500 mt-2">Mandate: Architecture standards, integration patterns, tech selections, change requests, exception handling.</p>
+          <p class="text-xs text-gray-500 mt-2">Mandate: Enterprise architecture standards, integration patterns, technology selections, change requests, exception handling.</p>
         </div>
 
         <div class="p-4 bg-white rounded-lg shadow-md border-t-4 border-l-2" style="border-color: var(--color-accent-gold);">
@@ -177,20 +196,20 @@
       <div class="bg-gray-100 p-6 rounded-lg">
         <h4 class="text-xl font-semibold mb-4" style="color: var(--color-primary-navy);">5) Decision Rights & RACI (Summary)</h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <p class="text-sm"><strong class="font-extrabold" style="color: var(--color-accent-teal);">Steering Committee:</strong> A/R for strategy, funding, portfolio priorities, major policy approvals, risk appetite.</p>
-          <p class="text-sm"><strong class="font-extrabold" style="color: var(--color-accent-teal);">Business Owners (Directors):</strong> A for business outcomes, process adoption, and operational handover.</p>
-          <p class="text-sm"><strong class="font-extrabold" style="color: var(--color-accent-teal);">Program Manager:</strong> A/R for portfolio delivery, budgets, cross-initiative dependencies, benefit tracking.</p>
-          <p class="text-sm"><strong class="font-extrabold" style="color: var(--color-accent-teal);">IT Gov & Arch Board:</strong> A/R for architecture standards, integrations, tech exceptions.</p>
-          <p class="text-sm"><strong class="font-extrabold" style="color: var(--color-accent-teal);">Assistant Manager / PMO:</strong> R for plans, reports, RAID, change logs, cadence.</p>
-          <p class="text-sm"><strong class="font-extrabold" style="color: var(--color-accent-teal);">Data Gov Committee:</strong> A/R for data standards, quality, lawful use.</p>
-          <p class="text-sm"><strong class="font-extrabold" style="color: var(--color-accent-teal);">Initiative/Project Managers:</strong> R for scope/schedule/cost/quality at workstream level.</p>
-          <p class="text-sm"><strong class="font-extrabold" style="color: var(--color-accent-teal);">CISO Function:</strong> A/R for security controls and incidents.</p>
-          <p class="text-sm"><strong class="font-extrabold" style="color: var(--color-accent-teal);">Community Manager:</strong> R for communications, branding, awareness, feedback channels.</p>
+          <p class="text-sm"><strong style="color: var(--color-accent-teal);">Steering Committee:</strong> A/R for strategy, funding, portfolio priorities, major policy approvals, risk appetite.</p>
+          <p class="text-sm"><strong style="color: var(--color-accent-teal);">Business Owners (Directors):</strong> A for business outcomes, process adoption, and operational handover.</p>
+          <p class="text-sm"><strong style="color: var(--color-accent-teal);">Program Manager:</strong> A/R for portfolio delivery, budgets, cross-initiative dependencies, benefit tracking.</p>
+          <p class="text-sm"><strong style="color: var(--color-accent-teal);">IT Gov & Arch Board:</strong> A/R for architecture standards, integrations, tech exceptions.</p>
+          <p class="text-sm"><strong style="color: var(--color-accent-teal);">Assistant Manager / PMO:</strong> R for plans, reports, RAID, change logs, and cadence management.</p>
+          <p class="text-sm"><strong style="color: var(--color-accent-teal);">Data Gov Committee:</strong> A/R for data standards, quality, and lawful use.</p>
+          <p class="text-sm"><strong style="color: var(--color-accent-teal);">Initiative/Project Managers:</strong> R for scope/schedule/cost/quality at workstream level.</p>
+          <p class="text-sm"><strong style="color: var(--color-accent-teal);">CISO Function:</strong> A/R for security controls and incidents.</p>
+          <p class="text-sm"><strong style="color: var(--color-accent-teal);">Community Manager:</strong> R for communications, branding, awareness, and feedback channels.</p>
         </div>
       </div>
     </section>
 
-    <!-- Foundational Pillars -->
+    <!-- ===== Foundational Pillars ===== -->
     <section>
       <h2 class="text-3xl font-bold mb-8 infographic-section-title">Foundational Pillars</h2>
 
@@ -203,8 +222,8 @@
           </div>
           <p class="mb-4 text-sm font-semibold text-gray-600">Goal: Near 100% compliance with Government's ICT controls by 2027.</p>
           <ul class="space-y-3">
-            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">National Policies (By 2026):</strong> Adopt outstanding national IT policies, including the <strong>National Digital Accessibility Policy</strong> and an <strong>Internet Usage Policy</strong> for employees.</li>
-            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Standards Alignment:</strong> Review/strengthen policies in line with <strong>ISO 27001</strong> and Oman’s national cybersecurity framework.</li>
+            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">National Policies (By 2026):</strong> Formally adopt outstanding national IT policies, including the <strong>National Digital Accessibility Policy</strong> and an <strong>Internet Usage Policy</strong> for employees.</li>
+            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Standards Alignment:</strong> Review/strengthen existing policies in line with <strong>ISO 27001</strong> and Oman’s national cybersecurity framework.</li>
             <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Required Documentation:</strong> Document an <strong>Information Security Governance Framework</strong> and an <strong>ICT BC/DR Plan</strong> by 2026.</li>
             <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Verification:</strong> Conduct <strong>annual IT audits</strong> to verify compliance and identify gaps for remediation.</li>
           </ul>
@@ -218,12 +237,12 @@
           </div>
           <p class="mb-4 text-sm font-semibold text-gray-600">Goal: Achieve ISO 27001 certification by 2028 for international best practice.</p>
           <ul class="space-y-3">
-            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">ISMS Implementation:</strong> Implement an <strong>ISMS</strong> aligned with ISO/IEC 27001 by the late 2020s.</li>
-            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Access Control:</strong> Enforce role-based access, <strong>least privilege</strong>, and <strong>MFA</strong> for admins and sensitive users.</li>
+            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">ISMS Implementation:</strong> Implement an <strong>Information Security Management System (ISMS)</strong> aligned with ISO/IEC 27001.</li>
+            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Access Control:</strong> Enforce role-based access, <strong>least privilege</strong>, and <strong>MFA</strong> for administrators and sensitive users.</li>
             <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Data Protection:</strong> Encrypt data <strong>at rest</strong> and <strong>in transit</strong> (TLS everywhere).</li>
             <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Monitoring & Testing:</strong> Annual VA/PT; establish a <strong>SOC</strong> capability for 24/7 monitoring by 2028.</li>
-            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Incident Readiness:</strong> Dedicated <strong>IR Team</strong> & drills.</li>
-            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Privacy:</strong> <strong>PIAs</strong> for new services; comply with evolving data protection regs.</li>
+            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Incident Readiness:</strong> Dedicated <strong>Incident Response Team</strong> & drills.</li>
+            <li class="compliance-feature p-2 text-sm"><strong style="color: var(--color-accent-teal);">Privacy:</strong> <strong>PIAs</strong> for new services; comply with evolving data protection regulations.</li>
           </ul>
         </div>
 
@@ -241,7 +260,7 @@
               <strong style="color: var(--color-accent-teal);">Mitigation Examples:</strong>
               <ul class="list-disc list-inside ml-4 mt-1 text-xs space-y-1">
                 <li><strong>Change Resistance:</strong> Communications, training, end-user involvement.</li>
-                <li><strong>Vendor Risks:</strong> SLAs, code escrow/KT, backups.</li>
+                <li><strong>Vendor Risks:</strong> SLAs, code escrow/knowledge transfer, backups.</li>
                 <li><strong>Cybersecurity:</strong> Monitoring, firewalls, (optionally) cyber insurance.</li>
               </ul>
             </li>
@@ -251,7 +270,7 @@
       </div>
     </section>
 
-    <!-- Operating Model Summary -->
+    <!-- ===== Operating Model Summary ===== -->
     <section class="mt-16 bg-gray-50 p-6 rounded-xl border-t-4" style="border-color: var(--color-primary-navy);">
       <h2 class="text-3xl font-bold mb-6 infographic-section-title">Operating Model & Reporting Lines</h2>
       <div class="bg-white p-4 rounded-lg shadow-md">
@@ -278,14 +297,14 @@
         <h4 class="text-lg font-semibold mb-2" style="color: var(--color-primary-navy);">Key Ways of Working & Transparency:</h4>
         <div class="grid sm:grid-cols-2 gap-4 text-sm text-gray-700">
           <p><strong style="color: var(--color-accent-teal);">Cadence:</strong> Weekly DT Team stand-up; bi-weekly initiative reviews; monthly Steering Committee; quarterly Board review.</p>
-          <p><strong style="color: var(--color-accent-teal);">Controls:</strong> Standard PMO toolkit, stage gates, <strong>privacy/security by design</strong>, and architecture compliance checks.</p>
-          <p><strong style="color: var(--color-accent-teal);">Transparency:</strong> Public roadmap highlights (as appropriate), service dashboards, and change calendars.</p>
+          <p><strong style="color: var(--color-accent-teal);">Controls:</strong> Standard PMO toolkit, <strong>privacy/security by design</strong>, and architecture compliance checks.</p>
+          <p><strong style="color: var(--color-accent-teal);">Transparency:</strong> Public-facing roadmap highlights (as appropriate), service dashboards, and change calendars.</p>
           <p><strong style="color: var(--color-accent-teal);">Benefits:</strong> Each initiative has measurable KPIs (SLAs, satisfaction, adoption) rolled up to a benefits dashboard.</p>
         </div>
       </div>
     </section>
 
-    <!-- Final Summary -->
+    <!-- ===== Final Summary ===== -->
     <footer class="mt-12 p-6 bg-white rounded-xl shadow-lg border-t-4" style="border-color: var(--color-accent-gold);">
       <p class="text-gray-700">
         Strong governance, rigorous security, and strict compliance are foundational to OMSB’s digital strategy. By setting up the right committees and policies, OMSB creates an environment where digital initiatives can be executed in a controlled, transparent manner. By hardening security and managing risks, OMSB protects stakeholders and builds confidence in digital services—instilling a culture of accountability and safety essential for sustainable transformation.
@@ -294,6 +313,7 @@
 
   </div>
 </div>
+
 <!-- ===== /Governance, Security & Compliance (drop-in) ===== -->
 
   <!-- ===== GLOBAL FOOTER (do not remove) ===== -->
