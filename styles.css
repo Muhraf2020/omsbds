@@ -130,3 +130,15 @@ main h2.text-om-navy {
 .main-cta a:hover {
   transform: translateY(-1px);
 }
+
+
+.cms-page h1 { font-size: 2rem; font-weight: 800; color: var(--color-primary-navy); margin: 1rem 0 .75rem; }
+.cms-page h2 { font-size: 1.5rem; font-weight: 700; color: var(--color-primary-navy); margin: 1rem 0 .5rem; }
+.cms-page h3 { font-size: 1.25rem; font-weight: 700; color: var(--color-accent-teal); margin: .75rem 0 .5rem; }
+.cms-page p { color: #374151; line-height: 1.7; margin: .75rem 0; }
+.cms-page ul, .cms-page ol { padding-left: 1.25rem; margin: .75rem 0; }
+.cms-page li { margin: .25rem 0; }
+.cms-page blockquote { border-left: 4px solid rgba(0,0,0,.08); padding-left: .75rem; color: #4b5563; font-style: italic; }
+.cms-page table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.cms-page th, .cms-page td { border: 1px solid #e5e7eb; padding: .5rem .75rem; }
+.cms-page img { max-width: 100%; border-radius: .5rem; }
