@@ -1,0 +1,18 @@
+{
+  "items": [
+    {"href": "index.html", "label": "Home"},
+    {"href": "executive_summary.html", "label": "Executive Summary"},
+    {"href": "foundational_pillars.html", "label": "Foundational Pillars"},
+    {"href": "vision_goals.html", "label": "Vision & Goals"},
+    {"href": "implementation_roadmap.html", "label": "Implementation Roadmap"},
+    {"href": "financial_profile.html", "label": "Financial Profile"},
+    {"href": "technical_architecture.html", "label": "Technology Architecture"},
+    {"href": "integration_with_platforms.html", "label": "Integration w/ Platforms"},
+    {"href": "governance_security_compliance.html", "label": "Governance & Security"},
+    {"href": "performance_measurement.html", "label": "Performance & KPIs"},
+    {"href": "change_management.html", "label": "Change Management"},
+    {"href": "innovation_future_technologies.html", "label": "Innovation & Future Tech"},
+    {"href": "risk_mitigation.html", "label": "Risk & Mitigation"},
+    {"href": "sustainability_financial_planning.html", "label": "Sustainability & Finance"}
+  ]
+}
